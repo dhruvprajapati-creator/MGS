@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coverage | Maya Global Services</title>
+  <meta name="description" content="Maya Global Services covers 20+ districts across Rajasthan with 170+ GPS-tracked field executives for fast and accurate verification." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/design-system.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/inner-pages.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════════ -->
+<nav id="main-nav" class="navbar-pill">
+  <div class="navbar-pill__inner">
+    <!-- Logo -->
+    <a href="index.html" class="navbar-pill__logo" data-page="index.html">
+      <span class="navbar-pill__logo-icon">
+        <img src="assets/logo.png" alt="Maya Global Services Logo" />
+      </span>
+      <span class="navbar-pill__logo-text">
+        <span class="main">Maya Global</span>
+        <span class="sub">Services Pvt Ltd</span>
+      </span>
+    </a>
+
+    <!-- Desktop Links -->
+    <div class="navbar-pill__links hide-mobile" id="desktop-nav">
+      <a href="index.html"      data-page="index.html"      class="navbar-pill__link">Home</a>
+      <a href="about.html"      data-page="about.html"      class="navbar-pill__link">About Us</a>
+      <a href="services.html"   data-page="services.html"   class="navbar-pill__link">Services</a>
+      <a href="coverage.html"   data-page="coverage.html"   class="navbar-pill__link">Coverage</a>
+      <a href="industries.html" data-page="industries.html" class="navbar-pill__link">Industries</a>
+      <a href="contact.html"    data-page="contact.html"    class="navbar-pill__link">Contact</a>
+    </div>
+
+    <!-- CTA / Call Button -->
+    <div class="navbar-pill__actions hide-mobile">
+      <a href="contact.html" class="btn btn-green btn-sm" style="padding: 8px 20px; font-size: 14px; border-radius: 20px; border-width: 1px;">Contact Us</a>
+    </div>
+    <!-- Mobile Toggle -->
+    <button class="navbar-pill__toggle show-mobile" id="mobile-menu-toggle" aria-label="Toggle Menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="about.html" class="mobile-menu__link">About Us</a>
+    <a href="services.html" class="mobile-menu__link">Services</a>
+    <a href="coverage.html" class="mobile-menu__link">Coverage</a>
+    <a href="industries.html" class="mobile-menu__link">Industries</a>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
+    <a href="tel:+910000000000" class="mobile-menu__link" style="color: var(--color-lime-vibrant); font-weight: bold;">Call Us Now</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="text-label-sm section-eyebrow" style="color:var(--color-lime-vibrant)">Where We Operate</span>
+    <h1 class="text-headline-xl page-hero__title reveal">Coverage Across Rajasthan</h1>
+    <p class="text-body-lg page-hero__subtitle reveal delay-100">170+ GPS-tracked field executives deployed across 20+ districts, delivering verified results with industry-leading turnaround times.</p>
+  </div>
+</section>
+
+<!-- STATS BANNER -->
+<section style="background:white;padding:48px 0;border-bottom:1px solid var(--color-outline-variant)">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center">
+      <div class="reveal">
+        <div class="stat-number" style="font-size:44px"><span data-count="20" data-suffix="+">20+</span></div>
+        <p style="color:var(--color-secondary);margin-top:8px">Districts Covered</p>
+      </div>
+      <div class="reveal delay-100">
+        <div class="stat-number" style="font-size:44px"><span data-count="170" data-suffix="+">170+</span></div>
+        <p style="color:var(--color-secondary);margin-top:8px">Field Executives</p>
+      </div>
+      <div class="reveal delay-200">
+        <div class="stat-number" style="font-size:44px"><span data-count="24" data-suffix="h">24h</span></div>
+        <p style="color:var(--color-secondary);margin-top:8px">Average TAT</p>
+      </div>
+      <div class="reveal delay-300">
+        <div class="stat-number" style="font-size:44px"><span data-count="99" data-suffix="%">99%</span></div>
+        <p style="color:var(--color-secondary);margin-top:8px">GPS Coverage</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISTRICT GRID -->
+<section class="section-padding" style="background:var(--color-surface-ice)">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <span class="text-label-sm section-eyebrow">Our Network</span>
+      <div class="section-divider" style="margin-inline:auto"></div>
+      <h2 class="text-headline-lg">Districts We Serve in Rajasthan</h2>
+      <p class="text-body-md section-subtitle">Comprehensive field verification coverage across major districts with dedicated local teams.</p>
+    </div>
+    <div class="coverage-grid" id="districts-grid">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- HOW GPS WORKS -->
+<section class="section-padding" style="background:var(--color-charcoal-navy)">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+      <div class="reveal">
+        <span class="text-label-sm" style="color:var(--color-lime-vibrant);display:block;margin-bottom:8px">Technology + Coverage</span>
+        <div class="section-divider"></div>
+        <h2 class="text-headline-lg" style="color:white;margin-bottom:20px">GPS-Enabled Field Intelligence</h2>
+        <p class="text-body-lg" style="color:rgba(255,255,255,0.65);margin-bottom:32px">Every field agent is equipped with our proprietary mobile application that captures GPS coordinates, timestamps, and photographic evidence at the point of verification — ensuring complete transparency and auditability.</p>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;gap:16px;align-items:flex-start">
+            <div style="width:40px;height:40px;border-radius:var(--radius-md);background:rgba(199,230,30,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span class="material-symbols-outlined" style="color:var(--color-lime-vibrant)">satellite_alt</span></div>
+            <div><strong style="color:white;display:block;margin-bottom:4px">Real-Time GPS Tracking</strong><p style="color:rgba(255,255,255,0.5);font-size:14px">Agent location verified at every field visit with coordinate logging.</p></div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start">
+            <div style="width:40px;height:40px;border-radius:var(--radius-md);background:rgba(199,230,30,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span class="material-symbols-outlined" style="color:var(--color-lime-vibrant)">photo_camera</span></div>
+            <div><strong style="color:white;display:block;margin-bottom:4px">Geo-tagged Photography</strong><p style="color:rgba(255,255,255,0.5);font-size:14px">All photos contain embedded GPS metadata for irrefutable proof.</p></div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start">
+            <div style="width:40px;height:40px;border-radius:var(--radius-md);background:rgba(199,230,30,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span class="material-symbols-outlined" style="color:var(--color-lime-vibrant)">cloud_sync</span></div>
+            <div><strong style="color:white;display:block;margin-bottom:4px">Instant Cloud Upload</strong><p style="color:rgba(255,255,255,0.5);font-size:14px">Reports synced to client MIS dashboard in real time upon case closure.</p></div>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="margin-top:36px">Expand to Your District</a>
+      </div>
+      <div class="reveal delay-200">
+        <!-- Mock map card -->
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-2xl);padding:32px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+            <span style="color:rgba(255,255,255,0.5);font-size:13px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase">Agent Activity — Today</span>
+            <span class="badge" style="background:rgba(199,230,30,0.15);color:var(--color-lime-vibrant)">● Live</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:rgba(255,255,255,0.04);border-radius:var(--radius-md)">
+              <span style="color:white;font-size:14px">Jaipur Zone</span>
+              <div style="display:flex;align-items:center;gap:10px"><div style="height:4px;width:80px;background:rgba(255,255,255,0.1);border-radius:999px;overflow:hidden"><div style="height:4px;width:68%;background:var(--color-lime-vibrant);border-radius:999px"></div></div><span style="color:var(--color-lime-vibrant);font-size:12px;font-weight:700">68%</span></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:rgba(255,255,255,0.04);border-radius:var(--radius-md)">
+              <span style="color:white;font-size:14px">Jodhpur Zone</span>
+              <div style="display:flex;align-items:center;gap:10px"><div style="height:4px;width:80px;background:rgba(255,255,255,0.1);border-radius:999px;overflow:hidden"><div style="height:4px;width:45%;background:var(--color-lime-vibrant);border-radius:999px"></div></div><span style="color:var(--color-lime-vibrant);font-size:12px;font-weight:700">45%</span></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:rgba(255,255,255,0.04);border-radius:var(--radius-md)">
+              <span style="color:white;font-size:14px">Udaipur Zone</span>
+              <div style="display:flex;align-items:center;gap:10px"><div style="height:4px;width:80px;background:rgba(255,255,255,0.1);border-radius:999px;overflow:hidden"><div style="height:4px;width:55%;background:var(--color-lime-vibrant);border-radius:999px"></div></div><span style="color:var(--color-lime-vibrant);font-size:12px;font-weight:700">55%</span></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:rgba(255,255,255,0.04);border-radius:var(--radius-md)">
+              <span style="color:white;font-size:14px">Kota Zone</span>
+              <div style="display:flex;align-items:center;gap:10px"><div style="height:4px;width:80px;background:rgba(255,255,255,0.1);border-radius:999px;overflow:hidden"><div style="height:4px;width:72%;background:var(--color-lime-vibrant);border-radius:999px"></div></div><span style="color:var(--color-lime-vibrant);font-size:12px;font-weight:700">72%</span></div>
+            </div>
+          </div>
+          <div style="margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.08);display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div><div style="font-size:24px;font-weight:700;font-family:var(--font-heading);color:white">147</div><div style="font-size:12px;color:rgba(255,255,255,0.4)">Agents Active Now</div></div>
+            <div><div style="font-size:24px;font-weight:700;font-family:var(--font-heading);color:white">312</div><div style="font-size:12px;color:rgba(255,255,255,0.4)">Cases Today</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="footer__logo">
+        <img src="assets/logo.png" alt="Maya Global Services Logo" />
+        Maya Global Services
+      </a>
+      <p class="footer__tagline text-body-sm">
+        Precision in Verification.<br />
+        Trusted by India's Financial Institutions since 2005.
+      </p>
+
+      <div class="footer__socials">
+        <a href="#" class="footer__social" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </a>
+        <a href="#" class="footer__social" aria-label="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__nav">
+      <div class="footer__nav-group">
+        <h4 class="footer__nav-title">Services</h4>
+        <a href="services.html" class="footer__nav-link">Field Verification</a>
+        <a href="services.html" class="footer__nav-link">Customer Verification</a>
+        <a href="services.html" class="footer__nav-link">Risk Management</a>
+        <a href="services.html" class="footer__nav-link">KYC Services</a>
+        <a href="services.html" class="footer__nav-link">Digital Reporting</a>
+      </div>
+      <div class="footer__nav-group">
+        <h4 class="footer__nav-title">Company</h4>
+        <a href="about.html"      class="footer__nav-link">About Us</a>
+        <a href="about.html"      class="footer__nav-link">Our Vision &amp; Mission</a>
+        <a href="coverage.html"   class="footer__nav-link">Coverage Map</a>
+        <a href="industries.html" class="footer__nav-link">Industries</a>
+        <a href="technology.html" class="footer__nav-link">Technology</a>
+      </div>
+      <div class="footer__nav-group">
+        <h4 class="footer__nav-title">Contact</h4>
+        <a href="contact.html" class="footer__nav-link">Get a Quote</a>
+        <a href="contact.html" class="footer__nav-link">Careers</a>
+        <a href="contact.html" class="footer__nav-link">Support</a>
+        <a href="#" class="footer__nav-link">Privacy Policy</a>
+        <a href="#" class="footer__nav-link">Terms of Service</a>
+      </div>
+    </div>
+
+    <!-- Agency Map Right Side -->
+    <div class="footer__map-right">
+      <h4 class="footer__nav-title">Our Location</h4>
+      <div style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113911.2334800366!2d75.723762!3d26.8851417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Agency Location Map"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <p class="text-body-sm footer__copy">
+        © 2024 Maya Global Services Pvt. Ltd. All rights reserved. · Jaipur, Rajasthan, India
+      </p>
+      <div class="footer__bottom-links">
+        <a href="#" class="footer__bottom-link">Privacy</a>
+        <a href="#" class="footer__bottom-link">Terms</a>
+        <a href="#" class="footer__bottom-link">Compliance</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/utils.js"></script>
+<script>
+const DISTRICTS = [
+  'Jaipur','Jodhpur','Udaipur','Kota','Ajmer','Bikaner','Alwar','Bharatpur',
+  'Sri Ganganagar','Sikar','Pali','Nagaur','Tonk','Dausa','Sawai Madhopur',
+  'Jhunjhunu','Chittorgarh','Banswara','Dungarpur','Baran','Barmer','Bhilwara',
+  'Bundi','Jaisalmer','Jalor'
+];
+
+domReady(async () => {
+  let districts = DISTRICTS;
+
+  try {
+    const { data } = await API.getCoverage();
+    if (data.districts && data.districts.length) districts = data.districts;
+  } catch (e) { /* use static */ }
+
+  const grid = document.getElementById('districts-grid');
+  grid.innerHTML = districts.map((d, i) => `
+    <div class="district-card reveal" style="animation-delay:${i * 40}ms">
+      <div class="district-card__dot"></div>
+      <span class="district-card__name">${d}</span>
+    </div>
+  `).join('');
+
+  // Re-init scroll reveal for dynamically added elements
+  ScrollReveal.init();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+/* =========================================================
+   HERO CAROUSEL — Redesigned (Professional Split Layout)
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ─── Container ──────────────────────────────────────────── */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 680px;
+  overflow: hidden;
+  background: #1A252B;
+}
+
+.hc-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hc-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+  z-index: 0;
+}
+
+.hc-slide.hc-slide--active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+/* ─── Background Image Blending ──────────────────────────── */
+.hc-slide__bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+/* Gradient overlay for perfect text blending */
+.hc-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(26, 37, 43, 0.95) 0%, rgba(26, 37, 43, 0.7) 45%, rgba(26, 37, 43, 0.1) 100%);
+  z-index: 2;
+}
+
+.hc-slide__bg-image--1 { background-image: url('../assets/slide1_bg.png'); }
+.hc-slide__bg-image--2 { background-image: url('https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); }
+.hc-slide__bg-image--3 { background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); }
+.hc-slide__bg-image--4 { background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); }
+.hc-slide__bg-image--5 { 
+  background-image: url('../assets/themed_regional_map_with_cities.png'); 
+  background-size: 55%; 
+  background-position: right 5% center;
+  background-repeat: no-repeat;
+  /* Feather the edges so the image blends perfectly as one with the background */
+  -webkit-mask-image: radial-gradient(ellipse at 75% 50%, black 40%, transparent 75%);
+  mask-image: radial-gradient(ellipse at 75% 50%, black 40%, transparent 75%);
+}
+
+/* Noise Texture Grain removed for mobile performance */
+
+/* ─── Slide Inner Layout & Text Content ──────────────────── */
+.hc-slide__inner {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hc-content-left {
+  width: 50%;
+  max-width: 650px;
+  padding: 120px 0 40px 0; /* Extra top padding so it doesn't touch navbar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.hc-title {
+  font-family: var(--font-heading, 'Inter', sans-serif);
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.hc-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(16px, 1.5vw, 18px);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* ─── Buttons ────────────────────────────────────────────── */
+.hc-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+
+.hc-btn-outline {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.hc-btn-outline:hover {
+  background-color: #FFFFFF;
+  color: #1A252B;
+}
+
+/* ─── Custom Layouts (Highlights, Features) ──────────────── */
+.hc-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+}
+.hc-highlight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(199, 230, 30, 0.3);
+  padding: 8px 16px;
+  border-radius: 30px;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 14px;
+}
+.hc-highlight .material-symbols-outlined {
+  color: #C7E61E;
+  font-size: 20px;
+}
+
+.hc-features-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.hc-feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: rgba(26, 37, 43, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  border-radius: 12px;
+}
+.hc-feature-icon {
+  font-size: 24px;
+  line-height: 1;
+}
+.hc-feature-title {
+  color: #C7E61E;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.hc-feature-desc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ─── Navigation Controls ────────────────────────────────── */
+.hc-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(26, 37, 43, 0.5);
+  border: 1px solid rgba(199, 230, 30, 0.3);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hc-arrow:hover {
+  background: #C7E61E;
+  color: #1A252B;
+  border-color: #C7E61E;
+}
+.hc-arrow--prev { left: 24px; }
+.hc-arrow--next { right: 24px; }
+.hc-arrow .material-symbols-outlined { font-size: 24px; }
+
+.hc-dots {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 12px;
+}
+.hc-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+.hc-dot:hover {
+  background: rgba(199, 230, 30, 0.8);
+}
+.hc-dot--active {
+  background: #C7E61E;
+  transform: scale(1.2);
+}
+
+.hc-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+.hc-progress__bar {
+  height: 100%;
+  background: #C7E61E;
+  width: 0%;
+  transition: width linear;
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .hc-content-left { width: 60%; }
+  .hc-slide__bg-image { width: 50%; }
+  .hc-slide__bg-image--5 {
+    background-size: 60%;
+    background-position: right center;
+  }
+}
+@media (max-width: 768px) {
+  .hero-carousel { min-height: 600px; height: 100svh; }
+  .hc-slide__bg-image { 
+    width: 100%; 
+    opacity: 0.3;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .hc-slide__bg-image--5 {
+    background-size: 90%;
+    background-position: bottom center;
+  }
+  .hc-content-left { 
+    width: 100%; 
+    padding: 20px; 
+    align-items: center; 
+    text-align: center; 
+  }
+  .hc-title { font-size: clamp(28px, 6vw, 36px); }
+  .hc-highlights { justify-content: center; }
+  .hc-features-grid { text-align: left; }
+  .hc-arrow { width: 40px; height: 40px; }
+  .hc-arrow--prev { left: 10px; }
+  .hc-arrow--next { right: 10px; }
+  .hc-buttons { justify-content: center; width: 100%; }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "maya-global-services-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Maya Global Services company profile website",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "start": "npx serve . -p 3000"
+  },
+  "keywords": ["maya", "global", "services", "verification"],
+  "author": "Maya Global Services",
+  "license": "ISC"
+}

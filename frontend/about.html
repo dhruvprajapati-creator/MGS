@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Maya Global Services</title>
+  <meta name="description" content="Learn about Maya Global Services — founded in 2005, serving India's financial institutions with field verification, KYC, and risk management solutions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/design-system.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/inner-pages.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════════ -->
+<nav id="main-nav" class="navbar-pill">
+  <div class="navbar-pill__inner">
+    <!-- Logo -->
+    <a href="index.html" class="navbar-pill__logo" data-page="index.html">
+      <span class="navbar-pill__logo-icon">
+        <img src="assets/logo.png" alt="Maya Global Services Logo" />
+      </span>
+      <span class="navbar-pill__logo-text">
+        <span class="main">Maya Global</span>
+        <span class="sub">Services Pvt Ltd</span>
+      </span>
+    </a>
+
+    <!-- Desktop Links -->
+    <div class="navbar-pill__links hide-mobile" id="desktop-nav">
+      <a href="index.html"      data-page="index.html"      class="navbar-pill__link">Home</a>
+      <a href="about.html"      data-page="about.html"      class="navbar-pill__link">About Us</a>
+      <a href="services.html"   data-page="services.html"   class="navbar-pill__link">Services</a>
+      <a href="coverage.html"   data-page="coverage.html"   class="navbar-pill__link">Coverage</a>
+      <a href="industries.html" data-page="industries.html" class="navbar-pill__link">Industries</a>
+      <a href="contact.html"    data-page="contact.html"    class="navbar-pill__link">Contact</a>
+    </div>
+
+    <!-- CTA / Call Button -->
+    <div class="navbar-pill__actions hide-mobile">
+      <a href="contact.html" class="btn btn-green btn-sm" style="padding: 8px 20px; font-size: 14px; border-radius: 20px; border-width: 1px;">Contact Us</a>
+    </div>
+    <!-- Mobile Toggle -->
+    <button class="navbar-pill__toggle show-mobile" id="mobile-menu-toggle" aria-label="Toggle Menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="about.html" class="mobile-menu__link">About Us</a>
+    <a href="services.html" class="mobile-menu__link">Services</a>
+    <a href="coverage.html" class="mobile-menu__link">Coverage</a>
+    <a href="industries.html" class="mobile-menu__link">Industries</a>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
+    <a href="tel:+910000000000" class="mobile-menu__link" style="color: var(--color-lime-vibrant); font-weight: bold;">Call Us Now</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <span class="text-label-sm section-eyebrow" style="color:var(--color-lime-vibrant)">Our Story</span>
+    <h1 class="text-headline-xl page-hero__title reveal">
+      Trusted Field Verification<br /><span style="color:var(--color-lime-vibrant)">Since 2005</span>
+    </h1>
+    <p class="text-body-lg page-hero__subtitle reveal delay-100">
+      A modern field verification and risk management company serving Banks, NBFCs,
+      Housing Finance Companies, FinTechs, and Insurance Institutions across India.
+    </p>
+  </div>
+</section>
+
+<!-- VISION & MISSION -->
+<section class="section-padding" style="background:var(--color-charcoal-navy);position:relative;overflow:hidden">
+  <div style="position:absolute;top:0;right:0;width:50%;height:100%;background:linear-gradient(to left, rgba(199,230,30,0.04), transparent);pointer-events:none"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <div class="section-header text-center reveal">
+      <span class="text-label-sm section-eyebrow" style="color:var(--color-lime-vibrant)">Our Purpose</span>
+      <div class="section-divider" style="margin-inline:auto"></div>
+      <h2 class="text-headline-lg" style="color:white">Vision &amp; Mission</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px">
+      <div class="reveal delay-100" style="background:rgba(248,250,251,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-xl);padding:40px;transition:border-color 0.3s ease">
+        <div style="width:48px;height:48px;background:rgba(199,230,30,0.15);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <span class="material-symbols-outlined" style="color:var(--color-lime-vibrant)">visibility</span>
+        </div>
+        <h2 class="text-headline-lg" style="color:white;margin-bottom:16px">Our Vision</h2>
+        <p class="text-body-lg" style="color:rgba(255,255,255,0.65)">
+          To become India's most trusted field verification partner by delivering operational excellence, innovation, and customer-focused verification solutions.
+        </p>
+      </div>
+      <div class="reveal delay-200" style="background:rgba(248,250,251,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-xl);padding:40px">
+        <div style="width:48px;height:48px;background:rgba(199,230,30,0.15);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <span class="material-symbols-outlined" style="color:var(--color-lime-vibrant)">flag</span>
+        </div>
+        <h2 class="text-headline-lg" style="color:white;margin-bottom:16px">Our Mission</h2>
+        <p class="text-body-lg" style="color:rgba(255,255,255,0.65)">
+          To help financial institutions reduce risk through accurate, transparent, secure, and timely verification services while maintaining the highest standards of professionalism.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY TIMELINE -->
+<section class="section-padding timeline-section">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <span class="text-label-sm section-eyebrow">Our Journey</span>
+      <div class="section-divider" style="margin-inline:auto"></div>
+      <h2 class="text-headline-lg">Building Trust Since 2005</h2>
+      <p class="text-body-md section-subtitle">Building a strong reputation as a trusted partner for operational support and risk management in the financial services industry.</p>
+    </div>
+
+    <div class="timeline" id="timeline-container">
+      <div class="timeline-item reveal">
+        <div class="timeline-item__dot"></div>
+        <div class="timeline-item__year">2005</div>
+        <p class="timeline-item__text">Maya Global Services Pvt. Ltd. is founded, establishing a foundational presence in field operations across Rajasthan.</p>
+      </div>
+      <div class="timeline-item reveal delay-100">
+        <div class="timeline-item__dot"></div>
+        <div class="timeline-item__year">2010</div>
+        <p class="timeline-item__text">Expanded coverage to 10 districts in Rajasthan with a dedicated team of trained field executives.</p>
+      </div>
+      <div class="timeline-item reveal delay-200">
+        <div class="timeline-item__dot"></div>
+        <div class="timeline-item__year">2015</div>
+        <p class="timeline-item__text">Launched digital MIS reporting system, enabling real-time verification status updates for clients.</p>
+      </div>
+      <div class="timeline-item reveal delay-300">
+        <div class="timeline-item__dot"></div>
+        <div class="timeline-item__year">2018</div>
+        <p class="timeline-item__text">Onboarded major banking and NBFC partners; achieved 50+ verified institutional clients across Rajasthan.</p>
+      </div>
+      <div class="timeline-item reveal delay-400">
+        <div class="timeline-item__dot"></div>
+        <div class="timeline-item__year">2022</div>
+        <p class="timeline-item__text">Deployed GPS-enabled mobile tracking for all 170+ field agents, significantly reducing turnaround times.</p>
+      </div>
+      <div class="timeline-item reveal delay-500">
+        <div class="timeline-item__dot" style="background:white;box-shadow:0 0 0 3px var(--color-lime-vibrant),0 0 0 6px var(--color-charcoal-navy)"></div>
+        <div class="timeline-item__year" style="color:var(--color-lime-vibrant)">Today</div>
+        <p class="timeline-item__text">Focused entirely on delivering accurate, secure, and technology-enabled field verification services that help lending institutions make faster, data-driven credit decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE VALUES -->
+<section class="section-padding" style="background:white">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <span class="text-label-sm section-eyebrow">What Drives Us</span>
+      <div class="section-divider" style="margin-inline:auto"></div>
+      <h2 class="text-headline-lg">Core Values</h2>
+      <p class="text-body-md section-subtitle">The principles that guide our field operations and institutional relationships.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card card reveal delay-100"><span class="material-symbols-outlined">verified</span><h3>Integrity</h3><p class="text-body-sm" style="color:var(--color-secondary);font-size:13px">Highest ethical standards in every verification we perform.</p></div>
+      <div class="value-card card reveal delay-150"><span class="material-symbols-outlined">my_location</span><h3>Accuracy</h3><p class="text-body-sm" style="color:var(--color-secondary);font-size:13px">Precision-first approach ensuring 99%+ accuracy in reports.</p></div>
+      <div class="value-card card reveal delay-200"><span class="material-symbols-outlined">handshake</span><h3>Customer Commitment</h3><p class="text-body-sm" style="color:var(--color-secondary);font-size:13px">Long-term partnerships built on trust and consistent delivery.</p></div>
+      <div class="value-card card reveal delay-250"><span class="material-symbols-outlined">visibility_lock</span><h3>Transparency</h3><p class="text-body-sm" style="color:var(--color-secondary);font-size:13px">Clear, auditable processes with full reporting visibility.</p></div>
+      <div class="value-card card reveal delay-300"><span class="material-symbols-outlined">assignment_turned_in</span><h3>Accountability</h3><p class="text-body-sm" style="color:var(--color-secondary);font-size:13px">We stand behind every report and take ownership of outcomes.</p></div>
+      <div class="value-card card reveal delay-350"><span class="material-symbols-outlined">lightbulb</span><h3>Innovation</h3><p class="text-body-sm" style="color:var(--color-secondary);font-size:13px">Continuously adopting technology to improve efficiency.</p></div>
+      <div class="value-card card reveal delay-400"><span class="material-symbols-outlined">shield</span><h3>Data Security</h3><p class="text-body-sm" style="color:var(--color-secondary);font-size:13px">Bank-grade security and GDPR-compliant data handling.</p></div>
+      <div class="value-card card reveal delay-450"><span class="material-symbols-outlined">trending_up</span><h3>Continuous Improvement</h3><p class="text-body-sm" style="color:var(--color-secondary);font-size:13px">Regular audits and training to evolve with industry standards.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OPERATIONAL BACKBONE -->
+<section class="section-padding" style="background:var(--color-surface-ice)">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <span class="text-label-sm section-eyebrow">Our Strength</span>
+      <div class="section-divider" style="margin-inline:auto"></div>
+      <h2 class="text-headline-lg">Our Operational Backbone</h2>
+    </div>
+    <div class="team-grid">
+      <div class="reveal">
+        <p class="text-body-lg" style="color:var(--color-secondary)">
+          Our experienced workforce, digital reporting capabilities, and extensive field network enable us to deliver reliable verification services with high accuracy and quick turnaround times across major districts in Rajasthan.
+        </p>
+        <div class="team-stats" style="margin-top:32px">
+          <div>
+            <div class="stat-number"><span data-count="170" data-suffix="+">170+</span></div>
+            <div class="text-body-md" style="color:var(--color-secondary)">Field Executives</div>
+          </div>
+          <div>
+            <div class="stat-number"><span data-count="20" data-suffix="+">20+</span></div>
+            <div class="text-body-md" style="color:var(--color-secondary)">Years Experience</div>
+          </div>
+        </div>
+      </div>
+      <div class="op-cards reveal delay-200">
+        <div class="op-card">
+          <div class="op-card__icon"><span class="material-symbols-outlined">groups</span></div>
+          <div>
+            <h4>Dedicated Operations Team</h4>
+            <p>Managing field logistics, real-time MIS, and mobile-enabled workforce allocation.</p>
+          </div>
+        </div>
+        <div class="op-card">
+          <div class="op-card__icon"><span class="material-symbols-outlined">fact_check</span></div>
+          <div>
+            <h4>Quality Assurance Team</h4>
+            <p>Ensuring accurate, transparent, and secure verification reports before submission.</p>
+          </div>
+        </div>
+        <div class="op-card">
+          <div class="op-card__icon"><span class="material-symbols-outlined">monitoring</span></div>
+          <div>
+            <h4>Reporting &amp; MIS Support</h4>
+            <p>Leveraging digital reporting and workflow automation for fast TATs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS TICKER -->
+<section class="clients-section">
+  <div class="container">
+    <p class="text-label-sm clients-label reveal">Trusted by India's Leading Financial Institutions</p>
+    <div class="clients-ticker">
+      <div class="clients-track">
+        <div class="clients-logo-item"><img src="assets/banks/yesbank.png" alt="Yes Bank" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/equitas.svg" alt="Equitas" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/lic.png" alt="LIC HFL" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/axis.jpg" alt="Axis Bank" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/kotak.svg" alt="Kotak" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/HDB.svg" alt="HDB Financial" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/HDFC.svg" alt="HDFC Bank" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/Bandhan bank.png" alt="Bandhan Bank" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/ausmall.webp" alt="AU Small Finance" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/chola.png" alt="Chola" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/mas.jpg" alt="MAS Financial" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/tata.png" alt="Tata Capital" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/jain finance.webp" alt="Jain Finance" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/credit saison.png" alt="Credit Saison" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/oto.jpg" alt="OTO" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/credila.svg" alt="Credila" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/yesbank.png" alt="Yes Bank" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/equitas.svg" alt="Equitas" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/lic.png" alt="LIC HFL" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/axis.jpg" alt="Axis Bank" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/kotak.svg" alt="Kotak" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/HDB.svg" alt="HDB Financial" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/HDFC.svg" alt="HDFC Bank" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/Bandhan bank.png" alt="Bandhan Bank" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/ausmall.webp" alt="AU Small Finance" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/chola.png" alt="Chola" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/mas.jpg" alt="MAS Financial" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/tata.png" alt="Tata Capital" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/jain finance.webp" alt="Jain Finance" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/credit saison.png" alt="Credit Saison" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/oto.jpg" alt="OTO" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/credila.svg" alt="Credila" /></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section"><div class="container"><div class="cta-card reveal"><div class="cta-card__orb cta-card__orb--1"></div><div class="cta-card__orb cta-card__orb--2"></div><div class="cta-card__content"><h2 class="text-headline-lg cta-card__title">Partner With Us</h2><p class="text-body-lg cta-card__subtitle">Join 50+ financial institutions that trust Maya Global Services for their verification needs.</p><div class="cta-card__actions"><a href="contact.html" class="btn btn-dark">Contact Our Team</a></div></div></div></div></section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="footer__logo">
+        <img src="assets/logo.png" alt="Maya Global Services Logo" />
+        Maya Global Services
+      </a>
+      <p class="footer__tagline text-body-sm">
+        Precision in Verification.<br />
+        Trusted by India's Financial Institutions since 2005.
+      </p>
+
+      <div class="footer__socials">
+        <a href="#" class="footer__social" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </a>
+        <a href="#" class="footer__social" aria-label="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__nav">
+      <div class="footer__nav-group">
+        <h4 class="footer__nav-title">Services</h4>
+        <a href="services.html" class="footer__nav-link">Field Verification</a>
+        <a href="services.html" class="footer__nav-link">Customer Verification</a>
+        <a href="services.html" class="footer__nav-link">Risk Management</a>
+        <a href="services.html" class="footer__nav-link">KYC Services</a>
+        <a href="services.html" class="footer__nav-link">Digital Reporting</a>
+      </div>
+      <div class="footer__nav-group">
+        <h4 class="footer__nav-title">Company</h4>
+        <a href="about.html"      class="footer__nav-link">About Us</a>
+        <a href="about.html"      class="footer__nav-link">Our Vision &amp; Mission</a>
+        <a href="coverage.html"   class="footer__nav-link">Coverage Map</a>
+        <a href="industries.html" class="footer__nav-link">Industries</a>
+        <a href="technology.html" class="footer__nav-link">Technology</a>
+      </div>
+      <div class="footer__nav-group">
+        <h4 class="footer__nav-title">Contact</h4>
+        <a href="contact.html" class="footer__nav-link">Get a Quote</a>
+        <a href="contact.html" class="footer__nav-link">Careers</a>
+        <a href="contact.html" class="footer__nav-link">Support</a>
+        <a href="#" class="footer__nav-link">Privacy Policy</a>
+        <a href="#" class="footer__nav-link">Terms of Service</a>
+      </div>
+    </div>
+
+    <!-- Agency Map Right Side -->
+    <div class="footer__map-right">
+      <h4 class="footer__nav-title">Our Location</h4>
+      <div style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113911.2334800366!2d75.723762!3d26.8851417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Agency Location Map"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <p class="text-body-sm footer__copy">
+        © 2024 Maya Global Services Pvt. Ltd. All rights reserved. · Jaipur, Rajasthan, India
+      </p>
+      <div class="footer__bottom-links">
+        <a href="#" class="footer__bottom-link">Privacy</a>
+        <a href="#" class="footer__bottom-link">Terms</a>
+        <a href="#" class="footer__bottom-link">Compliance</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/utils.js"></script>
+<script>
+domReady(async () => {
+  try {
+    const { data } = await API.getTimeline();
+    // Timeline is rendered statically; API data could be used to dynamically populate
+    console.log('Timeline data loaded from API:', data.length, 'events');
+  } catch (e) { /* use static */ }
+});
+</script>
+</body>
+</html>
