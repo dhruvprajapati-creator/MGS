@@ -1,0 +1,141 @@
+    <div style="display:flex; justify-content:flex-end; gap:8px; margin-bottom:24px; padding-right:16px;">
+      <button class="btn btn-icon" id="serv-prev" style="border:1px solid var(--color-border); background:var(--color-surface); border-radius:50%; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer"><span class="material-symbols-outlined">arrow_back</span></button>
+      <button class="btn btn-icon" id="serv-next" style="border:1px solid var(--color-border); background:var(--color-surface); border-radius:50%; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer"><span class="material-symbols-outlined">arrow_forward</span></button>
+    </div>
+    <div class="services-grid scroll-view" id="servicesGrid">
+      <div class="service-card card reveal" style="animation-delay: 0ms">
+        <div class="service-card__icon-wrap">
+          <span class="material-symbols-outlined service-card__icon">location_on</span>
+        </div>
+        <h3 class="text-headline-sm service-card__title">Field Investigation (FI)</h3>
+        <p class="text-body-sm service-card__desc">
+          Verify customer information with confidence through comprehensive on-ground investigations.
+        </p>
+        <ul class="service-card__list">
+          <li><span class="material-symbols-outlined">check_circle</span>Residential Verification</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Office Verification</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Business Verification</li>
+        </ul>
+        <a href="services.html#field" class="service-card__link">
+          Learn More <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+      <div class="service-card card service-card--dark reveal" style="animation-delay: 100ms">
+        <div class="service-card__icon-wrap service-card__icon-wrap--lime">
+          <span class="material-symbols-outlined service-card__icon">person_check</span>
+        </div>
+        <h3 class="text-headline-sm service-card__title">Customer Verification</h3>
+        <p class="text-body-sm service-card__desc">
+          End-to-end customer authentication to reduce fraud and support lending decisions.
+        </p>
+        <ul class="service-card__list">
+          <li><span class="material-symbols-outlined">check_circle</span>Identity Verification</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Address Verification</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Employment Verification</li>
+        </ul>
+        <a href="services.html#customer" class="service-card__link service-card__link--lime">
+          Learn More <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+      <div class="service-card card reveal" style="animation-delay: 200ms">
+        <div class="service-card__icon-wrap">
+          <span class="material-symbols-outlined service-card__icon">how_to_reg</span>
+        </div>
+        <h3 class="text-headline-sm service-card__title">Account Origination & Customer Onboarding</h3>
+        <p class="text-body-sm service-card__desc">
+          Complete onboarding support from document verification to workflow automation.
+        </p>
+        <ul class="service-card__list">
+          <li><span class="material-symbols-outlined">check_circle</span>Document Verification</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Bank Statement Validation</li>
+          <li><span class="material-symbols-outlined">check_circle</span>IT Returns Verification</li>
+        </ul>
+        <a href="services.html#onboarding" class="service-card__link">
+          Learn More <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+      <div class="service-card card service-card--dark reveal" style="animation-delay: 300ms">
+        <div class="service-card__icon-wrap service-card__icon-wrap--lime">
+          <span class="material-symbols-outlined service-card__icon">shield</span>
+        </div>
+        <h3 class="text-headline-sm service-card__title">Risk Management Support</h3>
+        <p class="text-body-sm service-card__desc">
+          Strengthening credit decisions through accurate verification and structured reporting.
+        </p>
+        <ul class="service-card__list">
+          <li><span class="material-symbols-outlined">check_circle</span>Credit Investigation</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Risk Profiling</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Customer Authenticity Checks</li>
+        </ul>
+        <a href="services.html#risk" class="service-card__link service-card__link--lime">
+          Learn More <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+      <div class="service-card card reveal" style="animation-delay: 400ms">
+        <div class="service-card__icon-wrap">
+          <span class="material-symbols-outlined service-card__icon">insert_chart</span>
+        </div>
+        <h3 class="text-headline-sm service-card__title">Digital MIS & Reporting</h3>
+        <p class="text-body-sm service-card__desc">
+          Transparent reporting with structured data for faster business decisions.
+        </p>
+        <ul class="service-card__list">
+          <li><span class="material-symbols-outlined">check_circle</span>Real-Time MIS Reports</li>
+          <li><span class="material-symbols-outlined">check_circle</span>TAT Monitoring</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Quality Reports</li>
+        </ul>
+        <a href="services.html#reporting" class="service-card__link">
+          Learn More <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+      <div class="service-card card service-card--dark reveal" style="animation-delay: 500ms">
+        <div class="service-card__icon-wrap service-card__icon-wrap--lime">
+          <span class="material-symbols-outlined service-card__icon">payments</span>
+        </div>
+        <h3 class="text-headline-sm service-card__title">Post Disbursement Verification (PDV)</h3>
+        <p class="text-body-sm service-card__desc">
+          Ensuring Loan Utilization & Compliance After Disbursement through on-site inspections.
+        </p>
+        <ul class="service-card__list">
+          <li><span class="material-symbols-outlined">check_circle</span>Loan Utilization Verification</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Asset & Property Verification</li>
+          <li><span class="material-symbols-outlined">check_circle</span>End-Use of Funds</li>
+        </ul>
+        <a href="services.html#pdv" class="service-card__link service-card__link--lime">
+          Learn More <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+      <div class="service-card card reveal" style="animation-delay: 600ms">
+        <div class="service-card__icon-wrap">
+          <span class="material-symbols-outlined service-card__icon">policy</span>
+        </div>
+        <h3 class="text-headline-sm service-card__title">Risk Containment Unit (RCU)</h3>
+        <p class="text-body-sm service-card__desc">
+          Strengthening Credit Decisions Through Advanced Risk Assessment and detailed investigations.
+        </p>
+        <ul class="service-card__list">
+          <li><span class="material-symbols-outlined">check_circle</span>Fraud Detection & Assessment</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Negative Profile Checks</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Personal Discussion (PD)</li>
+        </ul>
+        <a href="services.html#rcu" class="service-card__link">
+          Learn More <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const grid = document.getElementById('servicesGrid');
+        const prev = document.getElementById('serv-prev');
+        const next = document.getElementById('serv-next');
+        if (grid && prev && next) {
+          prev.addEventListener('click', () => {
+            grid.scrollBy({ left: -grid.clientWidth / 1.5, behavior: 'smooth' });
+          });
+          next.addEventListener('click', () => {
+            grid.scrollBy({ left: grid.clientWidth / 1.5, behavior: 'smooth' });
+          });
+        }
+      });
+    </script>

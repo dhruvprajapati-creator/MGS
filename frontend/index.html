@@ -115,7 +115,7 @@
           <div class="hc-highlights">
             <div class="hc-highlight"><span class="material-symbols-outlined">verified</span> Experienced Field Executives</div>
             <div class="hc-highlight"><span class="material-symbols-outlined">verified</span> Proven Operational Excellence</div>
-            <div class="hc-highlight"><span class="material-symbols-outlined">verified</span> Statewide Verification Network</div>
+            <div class="hc-highlight"><span class="material-symbols-outlined">verified</span> Multi-State Verification Network</div>
             <div class="hc-highlight"><span class="material-symbols-outlined">verified</span> Technology-Driven Reporting</div>
           </div>
           
@@ -180,7 +180,7 @@
               <span class="material-symbols-outlined hc-feature-icon">group</span>
               <div>
                 <h4 class="hc-feature-title">Dedicated On-Ground Experts</h4>
-                <p class="hc-feature-desc">With over 170 trained field executives across our network, we deliver physical verification that you can rely on.</p>
+                <p class="hc-feature-desc">With over 445+ trained field executives across our network, we deliver physical verification that you can rely on.</p>
               </div>
             </div>
           </div>
@@ -220,13 +220,6 @@
 
   </div><!-- /hc-track -->
 
-  <!-- ── Navigation Controls ────────────────────────────── -->
-  <button class="hc-arrow hc-arrow--prev" id="hcPrev" aria-label="Previous slide">
-    <span class="material-symbols-outlined"></span>
-  </button>
-  <button class="hc-arrow hc-arrow--next" id="hcNext" aria-label="Next slide">
-    <span class="material-symbols-outlined"></span>
-  </button>
 
   <!-- ── Dot Navigation ─────────────────────────────────── -->
   <div class="hc-dots" id="hcDots" role="tablist" aria-label="Slide navigation">
@@ -299,7 +292,7 @@
   <div class="container">
     <div class="section-header text-center reveal">
       <span class="text-label-sm section-eyebrow">What We Do</span>
-      <div class="section-divider" style="margin-inline:auto"></div>
+      <div class="section-divider"></div>
       <h2 class="text-headline-lg">Comprehensive Verification Services</h2>
       <p class="text-body-lg section-subtitle">
         From physical field investigations to advanced digital analytics — we cover
@@ -307,67 +300,148 @@
       </p>
     </div>
 
-    <div class="services-grid">
-      <!-- Field Verification -->
-      <div class="service-card card reveal delay-100">
+    <div style="position: relative;">
+      <button class="btn btn-icon" id="serv-prev" aria-label="Previous" style="position: absolute; left: -80px; top: 50%; transform: translateY(-50%); z-index: 10; border:1px solid var(--color-border); background:var(--color-surface); border-radius:50%; width:48px; height:48px; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"><span class="material-symbols-outlined">arrow_back</span></button>
+      <button class="btn btn-icon" id="serv-next" aria-label="Next" style="position: absolute; right: -80px; top: 50%; transform: translateY(-50%); z-index: 10; border:1px solid var(--color-border); background:var(--color-surface); border-radius:50%; width:48px; height:48px; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"><span class="material-symbols-outlined">arrow_forward</span></button>
+      
+      <div class="services-grid scroll-view" id="servicesGrid">
+      <div class="service-card card reveal" style="animation-delay: 0ms">
         <div class="service-card__icon-wrap">
           <span class="material-symbols-outlined service-card__icon">location_on</span>
         </div>
-        <h3 class="text-headline-sm service-card__title">Field Verification</h3>
+        <h3 class="text-headline-sm service-card__title">Field Investigation (FI)</h3>
         <p class="text-body-sm service-card__desc">
-          On-ground intelligence gathering to verify physical locations,
-          residences, businesses, and employment status.
+          Verify customer information with confidence through comprehensive on-ground investigations.
         </p>
         <ul class="service-card__list">
-          <li><span class="material-symbols-outlined">check_circle</span>Residence Verification</li>
-          <li><span class="material-symbols-outlined">check_circle</span>Office &amp; Business Verification</li>
-          <li><span class="material-symbols-outlined">check_circle</span>Employment &amp; Loan Verification</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Residential Verification</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Office Verification</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Business Verification</li>
         </ul>
         <a href="services.html#field" class="service-card__link">
           Learn More <span class="material-symbols-outlined">arrow_forward</span>
         </a>
       </div>
-
-      <!-- Customer Verification -->
-      <div class="service-card card service-card--dark reveal delay-200">
+      <div class="service-card card service-card--dark reveal" style="animation-delay: 100ms">
         <div class="service-card__icon-wrap service-card__icon-wrap--lime">
           <span class="material-symbols-outlined service-card__icon">person_check</span>
         </div>
         <h3 class="text-headline-sm service-card__title">Customer Verification</h3>
         <p class="text-body-sm service-card__desc">
-          Identity validation protocols and KYC services to protect your institution
-          from fraud while ensuring regulatory compliance.
+          End-to-end customer authentication to reduce fraud and support lending decisions.
         </p>
         <ul class="service-card__list">
-          <li><span class="material-symbols-outlined">check_circle</span>KYC Verification</li>
-          <li><span class="material-symbols-outlined">check_circle</span>Tele Verification</li>
-          <li><span class="material-symbols-outlined">check_circle</span>Document Collection</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Identity Verification</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Address Verification</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Employment Verification</li>
         </ul>
         <a href="services.html#customer" class="service-card__link service-card__link--lime">
           Learn More <span class="material-symbols-outlined">arrow_forward</span>
         </a>
       </div>
-
-      <!-- Risk Management -->
-      <div class="service-card card reveal delay-300">
+      <div class="service-card card reveal" style="animation-delay: 200ms">
         <div class="service-card__icon-wrap">
+          <span class="material-symbols-outlined service-card__icon">how_to_reg</span>
+        </div>
+        <h3 class="text-headline-sm service-card__title">Account Origination & Customer Onboarding</h3>
+        <p class="text-body-sm service-card__desc">
+          Complete onboarding support from document verification to workflow automation.
+        </p>
+        <ul class="service-card__list">
+          <li><span class="material-symbols-outlined">check_circle</span>Document Verification</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Bank Statement Validation</li>
+          <li><span class="material-symbols-outlined">check_circle</span>IT Returns Verification</li>
+        </ul>
+        <a href="services.html#onboarding" class="service-card__link">
+          Learn More <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+      <div class="service-card card service-card--dark reveal" style="animation-delay: 300ms">
+        <div class="service-card__icon-wrap service-card__icon-wrap--lime">
           <span class="material-symbols-outlined service-card__icon">shield</span>
         </div>
-        <h3 class="text-headline-sm service-card__title">Risk Management</h3>
+        <h3 class="text-headline-sm service-card__title">Risk Management Support</h3>
         <p class="text-body-sm service-card__desc">
-          Advanced analytical support to fortify your credit investigation
-          process with actionable, data-driven intelligence.
+          Strengthening credit decisions through accurate verification and structured reporting.
         </p>
         <ul class="service-card__list">
           <li><span class="material-symbols-outlined">check_circle</span>Credit Investigation</li>
-          <li><span class="material-symbols-outlined">check_circle</span>Digital MIS Reporting</li>
-          <li><span class="material-symbols-outlined">check_circle</span>GPS-Tracked Audits</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Risk Profiling</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Customer Authenticity Checks</li>
         </ul>
-        <a href="services.html#risk" class="service-card__link">
+        <a href="services.html#risk" class="service-card__link service-card__link--lime">
+          Learn More <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+      <div class="service-card card reveal" style="animation-delay: 400ms">
+        <div class="service-card__icon-wrap">
+          <span class="material-symbols-outlined service-card__icon">insert_chart</span>
+        </div>
+        <h3 class="text-headline-sm service-card__title">Digital MIS & Reporting</h3>
+        <p class="text-body-sm service-card__desc">
+          Transparent reporting with structured data for faster business decisions.
+        </p>
+        <ul class="service-card__list">
+          <li><span class="material-symbols-outlined">check_circle</span>Real-Time MIS Reports</li>
+          <li><span class="material-symbols-outlined">check_circle</span>TAT Monitoring</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Quality Reports</li>
+        </ul>
+        <a href="services.html#reporting" class="service-card__link">
+          Learn More <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+      <div class="service-card card service-card--dark reveal" style="animation-delay: 500ms">
+        <div class="service-card__icon-wrap service-card__icon-wrap--lime">
+          <span class="material-symbols-outlined service-card__icon">payments</span>
+        </div>
+        <h3 class="text-headline-sm service-card__title">Post Disbursement Verification (PDV)</h3>
+        <p class="text-body-sm service-card__desc">
+          Ensuring Loan Utilization & Compliance After Disbursement through on-site inspections.
+        </p>
+        <ul class="service-card__list">
+          <li><span class="material-symbols-outlined">check_circle</span>Loan Utilization Verification</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Asset & Property Verification</li>
+          <li><span class="material-symbols-outlined">check_circle</span>End-Use of Funds</li>
+        </ul>
+        <a href="services.html#pdv" class="service-card__link service-card__link--lime">
+          Learn More <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+      <div class="service-card card reveal" style="animation-delay: 600ms">
+        <div class="service-card__icon-wrap">
+          <span class="material-symbols-outlined service-card__icon">policy</span>
+        </div>
+        <h3 class="text-headline-sm service-card__title">Risk Containment Unit (RCU)</h3>
+        <p class="text-body-sm service-card__desc">
+          Strengthening Credit Decisions Through Advanced Risk Assessment and detailed investigations.
+        </p>
+        <ul class="service-card__list">
+          <li><span class="material-symbols-outlined">check_circle</span>Fraud Detection & Assessment</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Negative Profile Checks</li>
+          <li><span class="material-symbols-outlined">check_circle</span>Personal Discussion (PD)</li>
+        </ul>
+        <a href="services.html#rcu" class="service-card__link">
           Learn More <span class="material-symbols-outlined">arrow_forward</span>
         </a>
       </div>
     </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const grid = document.getElementById('servicesGrid');
+        const prev = document.getElementById('serv-prev');
+        const next = document.getElementById('serv-next');
+        if (grid && prev && next) {
+          prev.addEventListener('click', () => {
+            grid.scrollBy({ left: -grid.clientWidth / 1.5, behavior: 'smooth' });
+          });
+          next.addEventListener('click', () => {
+            grid.scrollBy({ left: grid.clientWidth / 1.5, behavior: 'smooth' });
+          });
+        }
+      });
+    </script>
   </div>
 </section>
 
@@ -384,20 +458,12 @@
         <p class="text-body-lg why-desc">
           For over two decades, Maya Global Services has been the backbone of credit
           decision-making for India's foremost financial institutions. Our unique blend
-          of experienced field agents, GPS-enabled technology, and digital reporting
+          of experienced field agents, modern technology, and digital reporting
           ensures unmatched accuracy and turnaround times.
         </p>
 
         <div class="why-features">
-          <div class="why-feature reveal delay-100">
-            <div class="why-feature__icon">
-              <span class="material-symbols-outlined">location_on</span>
-            </div>
-            <div>
-              <h4 class="text-headline-sm why-feature__title">GPS-Enabled Field Tracking</h4>
-              <p class="text-body-sm why-feature__desc">Real-time GPS data embedded in every field report ensures authenticity and location accuracy.</p>
-            </div>
-          </div>
+
           <div class="why-feature reveal delay-200">
             <div class="why-feature__icon">
               <span class="material-symbols-outlined">bolt</span>
@@ -485,14 +551,7 @@
             </div>
           </div>
 
-          <!-- GPS Badge overlay -->
-          <div class="why-dashboard__gps glass-panel">
-            <span class="material-symbols-outlined gps-icon">my_location</span>
-            <div>
-              <div class="why-dashboard__gps-title">GPS Active</div>
-              <div class="why-dashboard__gps-sub">170 agents tracked</div>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
@@ -506,7 +565,7 @@
   <div class="container">
     <div class="section-header text-center reveal">
       <span class="text-label-sm section-eyebrow">Who We Serve</span>
-      <div class="section-divider" style="margin-inline:auto"></div>
+      <div class="section-divider"></div>
       <h2 class="text-headline-lg">Industries We Serve</h2>
       <p class="text-body-lg section-subtitle">
         Specialized verification solutions tailored to the compliance and
@@ -558,7 +617,7 @@
   <div class="container">
     <div class="section-header text-center reveal">
       <span class="text-label-sm section-eyebrow">Our Process</span>
-      <div class="section-divider" style="margin-inline:auto"></div>
+      <div class="section-divider"></div>
       <h2 class="text-headline-lg">Verification in 4 Simple Steps</h2>
     </div>
 
@@ -577,7 +636,7 @@
         <div class="process-step__number">02</div>
         <div class="process-step__content">
           <h3 class="text-headline-sm">Field Dispatch</h3>
-          <p class="text-body-sm">A verified field executive is dispatched within hours, tracked via GPS for real-time visibility.</p>
+          <p class="text-body-sm">A verified field executive is dispatched within hours for fast visibility.</p>
         </div>
       </div>
       <div class="process-arrow reveal delay-250">
@@ -587,7 +646,7 @@
         <div class="process-step__number">03</div>
         <div class="process-step__content">
           <h3 class="text-headline-sm">Digital Collection</h3>
-          <p class="text-body-sm">Photographs, documents, and GPS coordinates are collected via our mobile app in real time.</p>
+          <p class="text-body-sm">Photographs and documents are collected via our mobile app in real time.</p>
         </div>
       </div>
       <div class="process-arrow reveal delay-350">
@@ -604,33 +663,7 @@
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════════════
-     CTA BANNER
-════════════════════════════════════════════════════════ -->
-<section class="cta-section">
-  <div class="container">
-    <div class="cta-card reveal">
-      <div class="cta-card__orb cta-card__orb--1"></div>
-      <div class="cta-card__orb cta-card__orb--2"></div>
-      <div class="cta-card__content">
-        <h2 class="text-headline-lg cta-card__title">
-          Ready to Secure Your Operations?
-        </h2>
-        <p class="text-body-lg cta-card__subtitle">
-          Partner with Rajasthan's most trusted verification network for fast,
-          accurate, and technology-driven results.
-        </p>
-        <div class="cta-card__actions">
-          <a href="contact.html" class="btn btn-dark">Request a Proposal</a>
-          <a href="tel:+91XXXXXXXXXX" class="btn btn-secondary cta-call-btn">
-            <span class="material-symbols-outlined">call</span>
-            Call Us Now
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- ════════════════════════════════════════════════════════
      OUR VALUED CLIENTS
@@ -639,7 +672,7 @@
   <div class="container">
     <div class="section-header text-center reveal">
       <span class="text-label-sm section-eyebrow">Our Clients</span>
-      <div class="section-divider" style="margin-inline:auto"></div>
+      <div class="section-divider"></div>
       <h2 class="text-headline-lg">Our Extremely Valued Clients</h2>
       <p class="text-body-lg section-subtitle">
         Trusted by India's foremost banks, NBFCs, housing finance companies,
@@ -718,9 +751,33 @@
       <div class="bank-logo-card"><img src="assets/banks/muthoth.webp" alt="Muthoot Finance" /></div>
     </div>
 
-    <div class="clients-wall-wrap reveal delay-200">
-      <div class="clients-wall-caption">Our Office Client Display Board</div>
-      <img src="assets/clients.jpeg" alt="Maya Global Services — Our Extremely Valued Clients board" class="clients-wall-img" />
+    
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     CTA BANNER
+════════════════════════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="cta-card__orb cta-card__orb--1"></div>
+      <div class="cta-card__orb cta-card__orb--2"></div>
+      <div class="cta-card__content">
+        <h2 class="text-headline-lg cta-card__title">
+          Ready to Secure Your Operations?
+        </h2>
+        <p class="text-body-lg cta-card__subtitle">
+          Partner with Rajasthan's most trusted verification network for fast,
+          accurate, and technology-driven results.
+        </p>
+        <div class="cta-card__actions">
+          <a href="contact.html" class="btn btn-dark">Request a Proposal</a>
+          <a href="tel:+91XXXXXXXXXX" class="btn btn-secondary cta-call-btn">
+            <span class="material-symbols-outlined">call</span>
+            Call Us Now
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
