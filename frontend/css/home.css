@@ -448,12 +448,14 @@
   max-width: 110px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(1) opacity(0.65);
+  filter: none;
+  opacity: 1;
   transition: all var(--transition-normal);
 }
 
 .bank-logo-card:hover img {
-  filter: grayscale(0) opacity(1);
+  filter: brightness(1.08) saturate(1.1);
+  opacity: 1;
 }
 
 /* Office wall photo */
