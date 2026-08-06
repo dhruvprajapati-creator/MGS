@@ -106,11 +106,23 @@ const MobileNav = {
       document.body.style.overflow = '';
     };
 
-    menuToggle.addEventListener('click', () => {
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       mobileMenu.classList.contains('open') ? close() : open();
     });
     overlay?.addEventListener('click', close);
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+
+    // Close menu when clicking anywhere outside the menu panel and hamburger toggle button
+    document.addEventListener('click', (event) => {
+      if (mobileMenu.classList.contains('open')) {
+        const isClickInsideMenu = mobileMenu.contains(event.target);
+        const isClickOnToggle = menuToggle.contains(event.target);
+        if (!isClickInsideMenu && !isClickOnToggle) {
+          close();
+        }
+      }
+    });
   }
 };
 

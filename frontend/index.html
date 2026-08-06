@@ -79,7 +79,6 @@
       <a href="services.html"   data-page="services.html"   class="navbar-pill__link">Services</a>
       <a href="coverage.html"   data-page="coverage.html"   class="navbar-pill__link">Coverage</a>
       <a href="industries.html" data-page="industries.html" class="navbar-pill__link">Industries</a>
-      <a href="contact.html"    data-page="contact.html"    class="navbar-pill__link">Contact</a>
     </div>
 
     <!-- CTA / Call Button -->
@@ -199,6 +198,9 @@
       <div class="hc-slide__inner container">
         <div class="hc-content-left">
           <h2 class="hc-title">Why Financial Leaders Choose Us</h2>
+          <p class="hc-subtitle">
+            Partnering with India's leading banks and financial institutions for over 20 years with Rajasthan's largest verified physical network.
+          </p>
           
           <div class="hc-features-grid" style="gap: 20px;">
             <div class="hc-feature-card" style="align-items: center;">
@@ -430,7 +432,7 @@
           <li><span class="material-symbols-outlined">check_circle</span>TAT Monitoring</li>
           <li><span class="material-symbols-outlined">check_circle</span>Quality Reports</li>
         </ul>
-        <a href="services.html#reporting" class="service-card__link">
+        <a href="services.html#mis" class="service-card__link">
           Learn More <span class="material-symbols-outlined">arrow_forward</span>
         </a>
       </div>
@@ -470,29 +472,6 @@
       </div>
     </div>
     </div>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const grid = document.getElementById('servicesGrid');
-        const prev = document.getElementById('serv-prev');
-        const next = document.getElementById('serv-next');
-        if (grid && prev && next) {
-          prev.addEventListener('click', () => {
-            grid.scrollBy({ left: -grid.clientWidth / 1.5, behavior: 'smooth' });
-          });
-          next.addEventListener('click', () => {
-            grid.scrollBy({ left: grid.clientWidth / 1.5, behavior: 'smooth' });
-          });
-          setInterval(() => {
-            if(grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 10) {
-              grid.scrollTo({left: 0, behavior: 'smooth'});
-            } else {
-              grid.scrollBy({ left: grid.clientWidth / 1.5, behavior: 'smooth' });
-            }
-          }, 6000);
-        }
-      });
-    </script>
   </div>
 </section>
 
@@ -541,7 +520,7 @@
         </a>
       </div>
 
-      <div class="why-visual reveal delay-200">
+      <div class="why-visual reveal delay-200 hide-on-tablet">
         <!-- Dashboard-style visual card -->
         <div class="why-dashboard">
           <div class="why-dashboard__header">
@@ -645,7 +624,7 @@
         <h3 class="text-headline-sm">Auto Finance</h3>
         <p class="text-body-sm">Verification and risk management for auto loans and vehicle financing.</p>
       </div>
-      <div class="industry-card card reveal delay-300">
+      <div class="industry-card card reveal delay-300 hide-on-tablet">
         <span class="material-symbols-outlined industry-card__icon">smartphone</span>
         <h3 class="text-headline-sm">FinTechs</h3>
         <p class="text-body-sm">Digital-first verification and reporting for modern FinTech platforms.</p>
@@ -792,22 +771,22 @@
       <div class="bank-logo-card"><img src="assets/banks/saraswat.webp" alt="Saraswat Bank" width="120" height="40" loading="lazy" decoding="async" /></div>
       <div class="bank-logo-card"><img src="assets/banks/piramal.png" alt="Piramal Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
       <div class="bank-logo-card"><img src="assets/banks/poonawalla.svg" alt="Poonawalla Fincorp" width="120" height="40" loading="lazy" decoding="async" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/chola.png" alt="Chola" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card hide-on-tablet"><img src="assets/banks/chola.png" alt="Chola" width="120" height="40" loading="lazy" decoding="async" /></div>
       <div class="bank-logo-card"><img src="assets/banks/incred.svg" alt="InCred" width="120" height="40" loading="lazy" decoding="async" /></div>
       <div class="bank-logo-card"><img src="assets/banks/DMI.svg" alt="DMI Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
       <div class="bank-logo-card"><img src="assets/banks/credila.svg" alt="HDFC Credila" width="120" height="40" loading="lazy" decoding="async" /></div>
       <div class="bank-logo-card"><img src="assets/banks/cars24.webp" alt="CARS24" width="120" height="40" loading="lazy" decoding="async" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/nissan.webp" alt="Nissan Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/kmpl.png" alt="KMPL" width="120" height="40" loading="lazy" decoding="async" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/ambit.svg" alt="Ambit" width="120" height="40" loading="lazy" decoding="async" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/mas.webp" alt="MAS Financial" width="120" height="40" loading="lazy" decoding="async" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/ikf.png" alt="IKF Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/Finnable.svg" alt="Finnable" width="120" height="40" loading="lazy" decoding="async" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/oto.webp" alt="OTO Capital" width="120" height="40" loading="lazy" decoding="async" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/iti.webp" alt="ITI" width="120" height="40" loading="lazy" decoding="async" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/jain_finance_opt.webp" alt="Jain Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/ganesh_opt.webp" alt="Ganesh Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/metrocity.jpeg" alt="Metrocity" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card hide-on-tablet"><img src="assets/banks/nissan.webp" alt="Nissan Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card hide-on-tablet"><img src="assets/banks/kmpl.png" alt="KMPL" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card hide-on-tablet"><img src="assets/banks/ambit.svg" alt="Ambit" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card hide-on-tablet"><img src="assets/banks/mas.webp" alt="MAS Financial" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card hide-on-tablet"><img src="assets/banks/ikf.png" alt="IKF Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card hide-on-tablet"><img src="assets/banks/Finnable.svg" alt="Finnable" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card hide-on-tablet"><img src="assets/banks/oto.webp" alt="OTO Capital" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card hide-on-tablet"><img src="assets/banks/iti.webp" alt="ITI" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card hide-on-tablet"><img src="assets/banks/jain_finance_opt.webp" alt="Jain Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card hide-on-tablet"><img src="assets/banks/ganesh_opt.webp" alt="Ganesh Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card hide-on-tablet"><img src="assets/banks/metrocity.jpeg" alt="Metrocity" width="120" height="40" loading="lazy" decoding="async" /></div>
       <a href="industries.html" style="text-decoration: none;">
         <div class="bank-logo-card" style="background:var(--color-charcoal-navy);color:white;font-weight:bold;text-align:center;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;">+ More Clients</div>
       </a>
@@ -825,7 +804,7 @@
       <h2 class="text-headline-lg" style="color:white; margin-bottom: 16px;">Why Financial Institutions Trust MGS</h2>
       <div class="section-divider" style="margin-inline: auto;"></div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:24px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:24px;" id="trustGrid">
 
        <div class="service-card service-card--dark card card-dark-glass reveal">
           <div class="service-card__icon-wrap service-card__icon-wrap--lime" style="margin-bottom:24px;">

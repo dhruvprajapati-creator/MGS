@@ -39,7 +39,6 @@
       <a href="services.html"   data-page="services.html"   class="navbar-pill__link">Services</a>
       <a href="coverage.html"   data-page="coverage.html"   class="navbar-pill__link">Coverage</a>
       <a href="industries.html" data-page="industries.html" class="navbar-pill__link">Industries</a>
-      <a href="contact.html"    data-page="contact.html"    class="navbar-pill__link">Contact</a>
     </div>
 
     <!-- CTA / Call Button -->
@@ -894,9 +893,17 @@ domReady(() => {
   const allMarkersGroup = new L.featureGroup(markers);
   
   // Set initial map view to fit all markers
-  setTimeout(() => {
+  function fitAllMarkers() {
     map.invalidateSize();
-    map.fitBounds(allMarkersGroup.getBounds(), { padding: [30, 30] });
+    if (window.innerWidth <= 768) {
+      map.setView([28.1, 74.6], 6.0);
+    } else {
+      map.fitBounds(allMarkersGroup.getBounds(), { padding: [30, 30] });
+    }
+  }
+
+  setTimeout(() => {
+    fitAllMarkers();
   }, 100);
 
   // Load and highlight state borders
@@ -953,10 +960,10 @@ domReady(() => {
            if (stateMarkers[stateName]) {
              fitToMarkers(stateMarkers[stateName]);
            } else {
-             map.fitBounds(allMarkersGroup.getBounds(), { padding: [30, 30] });
+             fitAllMarkers();
            }
         } else {
-           map.fitBounds(allMarkersGroup.getBounds(), { padding: [30, 30] });
+           fitAllMarkers();
         }
       });
     }
