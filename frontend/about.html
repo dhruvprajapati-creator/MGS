@@ -67,17 +67,51 @@
 </nav>
 
 <!-- PAGE HERO -->
-<section class="page-hero">
+<section class="page-hero" style="background-image: linear-gradient(rgba(17, 34, 49, 0.85), rgb(1 7 12 / 95%)), url(assets/maya_office_bg_with_logo.png); background-size: cover; background-position: center 20%;">
   <div class="container">
-    <span class="text-label-sm section-eyebrow" style="color:var(--color-lime-vibrant)">Our Story</span>
-    <div class="section-divider"></div>
-    <h1 class="text-headline-xl page-hero__title reveal">
-      Trusted Field Verification<br /><span style="color:var(--color-lime-vibrant)">Since 2005</span>
-    </h1>
-    <p class="text-body-lg page-hero__subtitle reveal delay-100">
-      A modern field verification and risk management company serving Banks, NBFCs,
-      Housing Finance Companies, FinTechs, and Insurance Institutions across India.
-    </p>
+    <div style="display: flex; flex-wrap: wrap; gap: 48px; justify-content: space-between; align-items: center;">
+      <div style="flex: 1; min-width: 320px;">
+        <span class="text-label-sm section-eyebrow" style="color:var(--color-lime-vibrant)">Who we are </span>
+        <div class="section-divider"></div>
+        <h1 class="text-headline-xl page-hero__title reveal">
+          Trusted Field Verification<br /><span style="color:var(--color-lime-vibrant)">Since 2005</span>
+        </h1>
+        <div class="page-hero__subtitle reveal delay-100" style="max-width: 800px;">
+          <p class="text-body-lg" style="margin-bottom: 24px; line-height: 1.75;">
+            Maya Global Services Pvt. Ltd. was established in 2005 with a simple objective—to provide financial institutions with dependable, transparent, and accurate field verification services.
+          </p>
+          <p class="text-body-lg" style="margin-bottom: 24px; line-height: 1.75;">
+            Over the past two decades, we have grown into one of North India's trusted verification partners, serving leading Banks, NBFCs, Housing Finance Companies, FinTechs, Insurance Companies, and Corporate Organizations.
+          </p>
+          <p class="text-body-lg" style="margin-bottom: 0; line-height: 1.75;">
+            Today, with a network of 445+ trained field executives and technology-enabled operations, we conduct thousands of verification assignments while helping clients reduce operational risk and make informed lending decisions.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-badges reveal delay-200">
+        <div class="hero-badge">
+          <span class="material-symbols-outlined hero-badge-icon">history</span>
+          <div class="hero-badge-value">20+</div>
+          <div class="hero-badge-label">Years</div>
+        </div>
+        <div class="hero-badge">
+          <span class="material-symbols-outlined hero-badge-icon">groups</span>
+          <div class="hero-badge-value">445+</div>
+          <div class="hero-badge-label">Field Executives</div>
+        </div>
+        <div class="hero-badge">
+          <span class="material-symbols-outlined hero-badge-icon">handshake</span>
+          <div class="hero-badge-value">50+</div>
+          <div class="hero-badge-label">Clients</div>
+        </div>
+        <div class="hero-badge">
+          <span class="material-symbols-outlined hero-badge-icon">timer</span>
+          <div class="hero-badge-value">4 Hr</div>
+          <div class="hero-badge-label">Avg. TAT</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -91,8 +125,8 @@
       <h2 class="text-headline-lg" style="color:white">Vision &amp; Mission</h2>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px">
-      <div class="reveal delay-100" style="background:rgba(248,250,251,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-xl);padding:40px;transition:border-color 0.3s ease">
-        <div style="width:48px;height:48px;background:rgba(199,230,30,0.15);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+      <div class="vision-card reveal delay-100">
+        <div class="vision-card__icon-wrap">
           <span class="material-symbols-outlined" style="color:var(--color-lime-vibrant)">visibility</span>
         </div>
         <h2 class="text-headline-lg" style="color:white;margin-bottom:16px">Our Vision</h2>
@@ -100,8 +134,8 @@
           To become India's most trusted field verification partner by delivering operational excellence, innovation, and customer-focused verification solutions.
         </p>
       </div>
-      <div class="reveal delay-200" style="background:rgba(248,250,251,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-xl);padding:40px">
-        <div style="width:48px;height:48px;background:rgba(199,230,30,0.15);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+      <div class="vision-card reveal delay-200">
+        <div class="vision-card__icon-wrap">
           <span class="material-symbols-outlined" style="color:var(--color-lime-vibrant)">flag</span>
         </div>
         <h2 class="text-headline-lg" style="color:white;margin-bottom:16px">Our Mission</h2>
@@ -151,7 +185,7 @@
       </div>
       <div class="timeline-item reveal delay-500">
         <div class="timeline-item__dot" style="background:white;box-shadow:0 0 0 3px var(--color-lime-vibrant),0 0 0 6px var(--color-charcoal-navy)"></div>
-        <div class="timeline-item__year" style="color:var(--color-lime-vibrant)">Today</div>
+        <div class="timeline-item__year" style="color:var(--color-lime-vibrant)">Present</div>
         <p class="timeline-item__text">Focused entirely on delivering accurate, secure, and technology-enabled field verification services that help lending institutions make faster, data-driven credit decisions.</p>
       </div>
     </div>
@@ -159,23 +193,23 @@
 </section>
 
 <!-- CORE VALUES -->
-<section class="section-padding" style="background:white">
+<section class="section-padding" style="background:var(--color-charcoal-navy)">
   <div class="container">
     <div class="section-header text-center reveal">
-      <span class="text-label-sm section-eyebrow">What Drives Us</span>
+      <span class="text-label-sm section-eyebrow" style="color:var(--color-lime-vibrant)">What Drives Us</span>
       <div class="section-divider"></div>
-      <h2 class="text-headline-lg">Core Values</h2>
-      <p class="text-body-md section-subtitle">The principles that guide our field operations and institutional relationships.</p>
+      <h2 class="text-headline-lg" style="color:white">Core Values</h2>
+      <p class="text-body-md section-subtitle" style="color:rgba(255, 255, 255, 0.7)">The principles that guide our field operations and institutional relationships.</p>
     </div>
     <div class="values-grid">
-      <div class="value-card card reveal delay-100"><span class="material-symbols-outlined">verified</span><h3>Integrity</h3><p class="text-body-sm" style="color:var(--color-secondary);font-size:13px">Highest ethical standards in every verification we perform.</p></div>
-      <div class="value-card card reveal delay-150"><span class="material-symbols-outlined">my_location</span><h3>Accuracy</h3><p class="text-body-sm" style="color:var(--color-secondary);font-size:13px">Precision-first approach ensuring 99%+ accuracy in reports.</p></div>
-      <div class="value-card card reveal delay-200"><span class="material-symbols-outlined">handshake</span><h3>Customer Commitment</h3><p class="text-body-sm" style="color:var(--color-secondary);font-size:13px">Long-term partnerships built on trust and consistent delivery.</p></div>
-      <div class="value-card card reveal delay-250"><span class="material-symbols-outlined">visibility_lock</span><h3>Transparency</h3><p class="text-body-sm" style="color:var(--color-secondary);font-size:13px">Clear, auditable processes with full reporting visibility.</p></div>
-      <div class="value-card card reveal delay-300"><span class="material-symbols-outlined">assignment_turned_in</span><h3>Accountability</h3><p class="text-body-sm" style="color:var(--color-secondary);font-size:13px">We stand behind every report and take ownership of outcomes.</p></div>
-      <div class="value-card card reveal delay-350"><span class="material-symbols-outlined">lightbulb</span><h3>Innovation</h3><p class="text-body-sm" style="color:var(--color-secondary);font-size:13px">Continuously adopting technology to improve efficiency.</p></div>
-      <div class="value-card card reveal delay-400"><span class="material-symbols-outlined">shield</span><h3>Data Security</h3><p class="text-body-sm" style="color:var(--color-secondary);font-size:13px">Bank-grade security and GDPR-compliant data handling.</p></div>
-      <div class="value-card card reveal delay-450"><span class="material-symbols-outlined">trending_up</span><h3>Continuous Improvement</h3><p class="text-body-sm" style="color:var(--color-secondary);font-size:13px">Regular audits and training to evolve with industry standards.</p></div>
+      <div class="value-card card reveal delay-100"><span class="material-symbols-outlined">verified</span><h3>Integrity</h3><p>Highest ethical standards in every verification we perform.</p></div>
+      <div class="value-card card reveal delay-150"><span class="material-symbols-outlined">my_location</span><h3>Accuracy</h3><p>Precision-first approach ensuring 99%+ accuracy in reports.</p></div>
+      <div class="value-card card reveal delay-200"><span class="material-symbols-outlined">handshake</span><h3>Customer Commitment</h3><p>Long-term partnerships built on trust and consistent delivery.</p></div>
+      <div class="value-card card reveal delay-250"><span class="material-symbols-outlined">visibility_lock</span><h3>Transparency</h3><p>Clear, auditable processes with full reporting visibility.</p></div>
+      <div class="value-card card reveal delay-300"><span class="material-symbols-outlined">assignment_turned_in</span><h3>Accountability</h3><p>We stand behind every report and take ownership of outcomes.</p></div>
+      <div class="value-card card reveal delay-350"><span class="material-symbols-outlined">lightbulb</span><h3>Innovation</h3><p>Continuously adopting technology to improve efficiency.</p></div>
+      <div class="value-card card reveal delay-400"><span class="material-symbols-outlined">shield</span><h3>Data Security</h3><p>Bank-grade security and GDPR-compliant data handling.</p></div>
+      <div class="value-card card reveal delay-450"><span class="material-symbols-outlined">trending_up</span><h3>Continuous Improvement</h3><p>Regular audits and training to evolve with industry standards.</p></div>
     </div>
   </div>
 </section>
@@ -200,6 +234,7 @@
             <div class="about-stat__label">Field Executives</div>
           </div>
           <div>
+            <span class="material-symbols-outlined" style="font-size:32px;color:var(--color-charcoal-navy)">history</span>
             <div class="stat-number"><span data-count="20" data-suffix="+">20+</span></div>
             <div class="text-body-md" style="color:var(--color-secondary)">Years Experience</div>
           </div>
@@ -216,14 +251,14 @@
         <div class="op-card">
           <div class="op-card__icon"><span class="material-symbols-outlined">fact_check</span></div>
           <div>
-            <h4>Quality Assurance Team</h4>
+            <h4>Quality Assurance</h4>
             <p>Ensuring accurate, transparent, and secure verification reports before submission.</p>
           </div>
         </div>
         <div class="op-card">
           <div class="op-card__icon"><span class="material-symbols-outlined">monitoring</span></div>
           <div>
-            <h4>Reporting &amp; MIS Support</h4>
+            <h4>Digital Reporting &amp; MIS</h4>
             <p>Leveraging digital reporting and workflow automation for fast TATs.</p>
           </div>
         </div>
@@ -283,7 +318,7 @@
 </section>
 
 <!-- CTA -->
-<section class="cta-section"><div class="container"><div class="cta-card reveal"><div class="cta-card__orb cta-card__orb--1"></div><div class="cta-card__orb cta-card__orb--2"></div><div class="cta-card__content"><h2 class="text-headline-lg cta-card__title">Partner With Us</h2><p class="text-body-lg cta-card__subtitle">Join 50+ financial institutions that trust Maya Global Services for their verification needs.</p><div class="cta-card__actions"><a href="contact.html" class="btn btn-dark">Contact Our Team</a></div></div></div></div></section>
+<section class="cta-section"><div class="container"><div class="cta-card reveal"><div class="cta-card__orb cta-card__orb--1"></div><div class="cta-card__orb cta-card__orb--2"></div><div class="cta-card__content"><h2 class="text-headline-lg cta-card__title">Partner With Us</h2><p class="text-body-lg cta-card__subtitle">Partner with Maya Global Services for accurate, secure, and technology-enabled field verification solutions trusted by leading banks, NBFCs, housing finance companies, and financial institutions.</p><div class="cta-card__actions"><a href="contact.html" class="btn btn-primary">Contact Our Team</a></div></div></div></div></section>
 
 <!-- FOOTER -->
 <footer class="footer">
