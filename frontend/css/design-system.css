@@ -487,7 +487,7 @@ textarea.form-control {
 .stat-number .accent { color: var(--color-lime-vibrant); }
 
 /* ─── Mobile Menu Overlay ────────────────────────────────── */
-.mobile-menu-overlay {
+.mobile-overlay {
   position: fixed;
   inset: 0;
   background: rgba(26, 37, 43, 0.6);
@@ -496,7 +496,7 @@ textarea.form-control {
   pointer-events: none;
   transition: opacity var(--transition-normal);
 }
-.mobile-menu-overlay.active {
+.mobile-overlay.active {
   opacity: 1;
   pointer-events: all;
 }

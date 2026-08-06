@@ -419,7 +419,7 @@
 
 @media (max-width: 580px) {
   .valued-clients-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -993,16 +993,24 @@
 @media (max-width: 768px) {
   .process-steps {
     flex-direction: column;
+    gap: 16px;
   }
 
   .process-arrow {
-    transform: rotate(90deg);
-    padding: 0;
+    transform: none;
+    padding: 16px 0;
     align-self: center;
+    width: 100%;
+  }
+
+  .process-arrow .material-symbols-outlined {
+    transform: rotate(90deg);
+    font-size: 32px;
   }
 
   .process-step {
-    padding: 0;
+    padding: 0 20px;
+    width: 100%;
   }
 }
 
