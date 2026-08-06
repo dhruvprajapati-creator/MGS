@@ -4,9 +4,13 @@
  */
 
 // Detect if served locally or in production
-const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+const _isLocal = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+// NOTE: Update BACKEND_URL below when production backend is deployed.
+// Leave as null to disable API calls in production (static content is shown as fallback).
+const BACKEND_URL = null; // e.g. 'https://maya-backend.onrender.com'
+const API_BASE = _isLocal
   ? (window.location.port === '5000' ? '/api' : 'http://localhost:5000/api')
-  : 'https://YOUR-BACKEND-URL-HERE.onrender.com/api'; // <--- UPDATE THIS WHEN BACKEND IS LIVE
+  : (BACKEND_URL ? BACKEND_URL + '/api' : null);
 
 const API = {
   /**
@@ -15,6 +19,7 @@ const API = {
    * @param {object} options
    */
   async request(endpoint, options = {}) {
+    if (!API_BASE) return null; // Backend not configured — skip silently
     try {
       const response = await fetch(`${API_BASE}${endpoint}`, {
         headers: {
@@ -29,7 +34,7 @@ const API = {
       }
       return data;
     } catch (error) {
-      console.error(`API Error [${endpoint}]:`, error.message);
+      console.warn(`API [${endpoint}] unavailable:`, error.message);
       throw error;
     }
   },

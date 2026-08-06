@@ -6,7 +6,15 @@
     "dev": "npx serve . -p 3000",
     "start": "npx serve . -p 3000"
   },
-  "keywords": ["maya", "global", "services", "verification"],
+  "keywords": [
+    "maya",
+    "global",
+    "services",
+    "verification"
+  ],
   "author": "Maya Global Services",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "sharp": "^0.35.3"
+  }
 }

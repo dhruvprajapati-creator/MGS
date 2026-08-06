@@ -2,7 +2,8 @@
    HERO CAROUSEL — Redesigned (Professional Split Layout)
    ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* Fonts loaded via <link> tags in HTML head — no @import needed here */
+
 
 /* ─── Container ──────────────────────────────────────────── */
 .hero-carousel {
@@ -61,15 +62,17 @@
   z-index: 2;
 }
 
-.hc-slide__bg-image--1 { background-image: url('../assets/slide1_bg.png'); }
-.hc-slide__bg-image--2 { background-image: url('https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); }
-.hc-slide__bg-image--3 { background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); }
-.hc-slide__bg-image--4 { background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); }
+.hc-slide__bg-image--1 { background-image: url('../assets/slide1_bg.webp'); }
+/* Slides 2, 3, 4 backgrounds are lazy-loaded via JS (hero-carousel.js) when activated */
+/* Slide 2: Unsplash photo-1573164713988 */
+/* Slide 3: Unsplash photo-1560518883 */
+/* Slide 4: Unsplash photo-1556761175 */
 .hc-slide__bg-image--5 { 
-  background-image: url('../assets/hero_slide_5_bg.png'); 
+  background-image: url('../assets/hero_slide_5_bg.webp'); 
 }
 
 /* Noise Texture Grain removed for mobile performance */
+
 
 /* ─── Slide Inner Layout & Text Content ──────────────────── */
 .hc-slide__inner {

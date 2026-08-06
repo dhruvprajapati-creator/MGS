@@ -27,6 +27,25 @@
   let touchStartY   = 0;
   let isTransitioning = false;
 
+  // ─── Lazy Background URLs ─────────────────────────────
+  // These are injected only when the slide first becomes active.
+  // Slide 1 bg is always set via CSS (.hc-slide__bg-image--1) for fast LCP.
+  const LAZY_BGS = {
+    1: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1280&q=60',
+    2: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1280&q=60',
+    3: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1280&q=60',
+  };
+  const loadedBgs = new Set([0, 4]); // slide 0 & 4 loaded via CSS
+
+  function lazyLoadSlideBg(index) {
+    if (loadedBgs.has(index)) return;
+    const url = LAZY_BGS[index];
+    if (!url) return;
+    const bgEl = slides[index] && slides[index].querySelector('.hc-slide__bg-image');
+    if (bgEl) bgEl.style.backgroundImage = `url('${url}')`;
+    loadedBgs.add(index);
+  }
+
   // ─── Elements ─────────────────────────────────────────────
   let slides, dots, prevBtn, nextBtn, progressBar, currentLabel;
 
@@ -75,8 +94,12 @@
       if (!paused) resetProgress();
     });
 
-    // Start auto-advance
-    startAuto();
+    // Delay auto-advance until page is fully loaded (don't compete with image downloads)
+    if (document.readyState === 'complete') {
+      startAuto();
+    } else {
+      window.addEventListener('load', startAuto, { once: true });
+    }
 
     // Animate counters in slide 1
     animateMetrics();
@@ -114,6 +137,9 @@
     // Activate target
     const slide = slides[index];
     if (!slide) return;
+
+    // Lazy-load this slide's background image on first activation
+    lazyLoadSlideBg(index);
 
     slide.classList.add('hc-slide--active');
     slide.setAttribute('aria-hidden', 'false');

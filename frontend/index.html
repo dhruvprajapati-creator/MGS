@@ -11,17 +11,48 @@
   <meta property="og:description" content="Trusted field verification and risk management partner for India's financial institutions since 2005." />
   <meta property="og:type" content="website" />
 
-  <!-- Fonts & Icons -->
+  <!-- Security Headers -->
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Critical Resource Preloads -->
+  <!-- Preload first hero image (LCP element) — WebP for maximum speed -->
+  <link rel="preload" as="image" href="assets/slide1_bg.webp" fetchpriority="high" />
+  <!-- Preload primary font (Inter 400) -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+
+  <!-- DNS Prefetch for external resources -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet" />
+  <link rel="dns-prefetch" href="https://api.fontshare.com" />
+  <link rel="dns-prefetch" href="https://images.unsplash.com" />
 
-  <!-- Stylesheets -->
+  <!-- Fonts: trimmed to 400 + 600 weights only (was 400/500/600/700 = ~1MB, now ~200KB) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600&display=swap" rel="stylesheet" />
+  <!-- Material Symbols: load only outlined variant, restrict to icons actually used -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" rel="stylesheet" />
+
+
+  <!-- Inline Critical CSS: ensures hero + navbar render instantly on first paint -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #f8fafb; color: #191c1d; -webkit-font-smoothing: antialiased; }
+    /* Hide mobile-only elements on first paint (prevents FOUC of mobile menu) */
+    .mobile-menu { display: none; }
+    .mobile-overlay { display: none; }
+    /* Hero skeleton — ensures background shows immediately before CSS loads */
+    .hero-carousel { position: relative; width: 100%; height: 100vh; min-height: 680px; overflow: hidden; background: #1A252B; }
+    .hc-slide__bg-image--1 { background-image: url('assets/slide1_bg.webp'); background-size: cover; background-position: center; position: absolute; inset: 0; z-index: 1; }
+  </style>
+
+  <!-- Stylesheets: blocking load (fast, ~50KB, prevents FOUC) -->
   <link rel="stylesheet" href="css/design-system.css" />
   <link rel="stylesheet" href="css/hero-carousel.css" />
   <link rel="stylesheet" href="css/home.css" />
+
 </head>
 <body>
 
@@ -33,7 +64,7 @@
     <!-- Logo -->
     <a href="index.html" class="navbar-pill__logo" data-page="index.html">
       <span class="navbar-pill__logo-icon">
-        <img src="assets/logo.png" alt="Maya Global Services Logo" />
+        <img src="assets/logo.png" alt="Maya Global Services Logo" width="36" height="36" decoding="async" />
       </span>
       <span class="navbar-pill__logo-text">
         <span class="main">Maya Global</span>
@@ -254,45 +285,45 @@
     <p class="text-label-sm clients-label reveal">Trusted by India's Leading Financial Institutions</p>
     <div class="clients-ticker">
       <div class="clients-track">
-                        <div class="clients-logo-item"><img src="assets/banks/bajaj_finance.svg" alt="Bajaj Finance" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/Bandhan_bank.png" alt="Bandhan Bank" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/Finnable.svg" alt="Finnable" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/HDFC.svg" alt="Hdfc" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/aditya birla housing.webp" alt="Aditya Birla Housing" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/aditya_birla capital.svg" alt="Aditya Birla Capital" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/ambit.svg" alt="Ambit" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/ausmall.webp" alt="Ausmall" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/axis.jpg" alt="Axis" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/cars24.jpg" alt="Cars24" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/chola.png" alt="Chola" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/credila.svg" alt="Credila" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/equitas.svg" alt="Equitas" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/ganesh.webp" alt="Ganesh" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/ikf.png" alt="Ikf" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/iti.png" alt="Iti" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/jain_finance.webp" alt="Jain Finance" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/jana.jpg" alt="Jana" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/kmpl.png" alt="Kmpl" /></div>
-        <!-- Duplicated for seamless loop -->
-        <div class="clients-logo-item"><img src="assets/banks/bajaj_finance.svg" alt="Bajaj Finance" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/Bandhan_bank.png" alt="Bandhan Bank" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/Finnable.svg" alt="Finnable" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/HDFC.svg" alt="Hdfc" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/aditya birla housing.webp" alt="Aditya Birla Housing" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/aditya_birla capital.svg" alt="Aditya Birla Capital" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/ambit.svg" alt="Ambit" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/ausmall.webp" alt="Ausmall" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/axis.jpg" alt="Axis" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/cars24.jpg" alt="Cars24" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/chola.png" alt="Chola" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/credila.svg" alt="Credila" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/equitas.svg" alt="Equitas" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/ganesh.webp" alt="Ganesh" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/ikf.png" alt="Ikf" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/iti.png" alt="Iti" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/jain_finance.webp" alt="Jain Finance" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/jana.jpg" alt="Jana" /></div>
-        <div class="clients-logo-item"><img src="assets/banks/kmpl.png" alt="Kmpl" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/bajaj_finance.svg" alt="Bajaj Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/bandhan_bank.webp" alt="Bandhan Bank" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/Finnable.svg" alt="Finnable" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/HDFC.svg" alt="HDFC" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/aditya birla housing.webp" alt="Aditya Birla Housing" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/aditya_birla capital.svg" alt="Aditya Birla Capital" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/ambit.svg" alt="Ambit" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/ausmall.webp" alt="AU Small Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/axis.webp" alt="Axis Bank" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/cars24.webp" alt="Cars24" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/chola.png" alt="Chola" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/credila.svg" alt="Credila" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/equitas.svg" alt="Equitas" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/ganesh_opt.webp" alt="Ganesh Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/ikf.png" alt="IKF Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/iti.webp" alt="ITI" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/jain_finance_opt.webp" alt="Jain Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/jana.webp" alt="Jana Small Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item"><img src="assets/banks/kmpl.png" alt="KMPL" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <!-- Duplicated for seamless CSS animation loop -->
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/bajaj_finance.svg" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/bandhan_bank.webp" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/Finnable.svg" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/HDFC.svg" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/aditya birla housing.webp" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/aditya_birla capital.svg" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/ambit.svg" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/ausmall.webp" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/axis.webp" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/cars24.webp" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/chola.png" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/credila.svg" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/equitas.svg" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/ganesh_opt.webp" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/ikf.png" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/iti.webp" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/jain_finance_opt.webp" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/jana.webp" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="clients-logo-item" aria-hidden="true"><img src="assets/banks/kmpl.png" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
       </div>
     </div>
   </div>
@@ -703,80 +734,80 @@
     <!-- Row 1 -->
     <div class="clients-second-ticker">
       <div class="clients-second-track">
-        <div class="bank-logo-item"><img src="assets/banks/HDFC.svg" alt="Hdfc" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/lic.png" alt="Lic" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/lt.png" alt="Lt" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/mas.jpg" alt="Mas" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/metrocity.jpeg" alt="Metrocity" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/muthoth.webp" alt="Muthoth" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/nissan.jpg" alt="Nissan" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/oto.jpg" alt="Oto" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/piramal.png" alt="Piramal" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/poonawalla.svg" alt="Poonawalla" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/saraswat.jpg" alt="Saraswat" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/Bandhan_bank.png" alt="Bandhan Bank" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/sk finance.jfif" alt="Sk Finance" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/spinny.jpg" alt="Spinny" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/suryaoday.webp" alt="Suryaoday" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/tata.png" alt="Tata" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/toyota.png" alt="Toyota" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/tyger.png" alt="Tyger" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/wonderhouse.svg" alt="Wonderhouse" /></div>
-        <!-- Duplicated -->
-        <div class="bank-logo-item"><img src="assets/banks/HDFC.svg" alt="Hdfc" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/lic.png" alt="Lic" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/lt.png" alt="Lt" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/mas.jpg" alt="Mas" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/metrocity.jpeg" alt="Metrocity" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/muthoth.webp" alt="Muthoth" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/nissan.jpg" alt="Nissan" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/oto.jpg" alt="Oto" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/piramal.png" alt="Piramal" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/poonawalla.svg" alt="Poonawalla" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/saraswat.jpg" alt="Saraswat" /></div>
-       <div class="bank-logo-item"><img src="assets/banks/Bandhan_bank.png" alt="Bandhan Bank" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/sk finance.jfif" alt="Sk Finance" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/spinny.jpg" alt="Spinny" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/suryaoday.webp" alt="Suryaoday" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/tata.png" alt="Tata" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/toyota.png" alt="Toyota" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/tyger.png" alt="Tyger" /></div>
-        <div class="bank-logo-item"><img src="assets/banks/wonderhouse.svg" alt="Wonderhouse" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/HDFC.svg" alt="HDFC" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/lic.webp" alt="LIC" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/lt.png" alt="L&T Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/mas.webp" alt="MAS Financial" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/metrocity.jpeg" alt="Metrocity" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/muthoth.webp" alt="Muthoot Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/nissan.webp" alt="Nissan Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/oto.webp" alt="OTO Capital" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/piramal.png" alt="Piramal Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/poonawalla.svg" alt="Poonawalla Fincorp" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/saraswat.webp" alt="Saraswat Bank" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/bandhan_bank.webp" alt="Bandhan Bank" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/sk finance.jfif" alt="SK Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/spinny.webp" alt="Spinny" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/suryaoday.webp" alt="Suryoday Bank" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/tata.png" alt="Tata Capital" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/toyota.png" alt="Toyota Financial" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/tyger.png" alt="Tyger" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item"><img src="assets/banks/wonderhouse.svg" alt="Wonderhouse" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <!-- Duplicated for seamless loop -->
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/HDFC.svg" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/lic.webp" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/lt.png" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/mas.webp" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/metrocity.jpeg" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/muthoth.webp" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/nissan.webp" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/oto.webp" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/piramal.png" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/poonawalla.svg" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/saraswat.webp" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/bandhan_bank.webp" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/sk finance.jfif" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/spinny.webp" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/suryaoday.webp" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/tata.png" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/toyota.png" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/tyger.png" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
+        <div class="bank-logo-item" aria-hidden="true"><img src="assets/banks/wonderhouse.svg" alt="" width="120" height="40" loading="lazy" decoding="async" /></div>
       </div>
     </div>
 
     <div class="valued-clients-grid reveal">
-      <div class="bank-logo-card"><img src="assets/banks/HDFC.svg" alt="HDFC Bank" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/kotak.svg" alt="Kotak Mahindra Bank" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/axis.jpg" alt="Axis Bank" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/bajaj_finance.svg" alt="Bajaj Finance" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/aditya_birla capital.svg" alt="Aditya Birla Capital" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/lic.png" alt="LIC HFL" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/lt.png" alt="L&T Finance" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/muthoth.webp" alt="Muthoot Finance" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/Bandhan_bank.png" alt="Bandhan Bank" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/ausmall.webp" alt="AU Small Finance Bank" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/equitas.svg" alt="Equitas" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/jana.jpg" alt="Jana Small Finance Bank" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/saraswat.jpg" alt="Saraswat Bank" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/piramal.png" alt="Piramal Finance" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/poonawalla.svg" alt="Poonawalla Fincorp" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/chola.png" alt="Chola" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/incred.svg" alt="InCred" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/DMI.svg" alt="DMI Finance" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/credila.svg" alt="HDFC Credila" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/cars24.jpg" alt="CARS24" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/nissan.jpg" alt="Nissan Finance" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/kmpl.png" alt="KMPL" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/ambit.svg" alt="Ambit" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/mas.jpg" alt="MAS Financial" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/ikf.png" alt="IKF Finance" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/Finnable.svg" alt="Finnable" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/oto.jpg" alt="OTO Capital" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/iti.png" alt="ITI" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/jain_finance.webp" alt="Jain Finance" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/ganesh.webp" alt="Ganesh Finance" /></div>
-      <div class="bank-logo-card"><img src="assets/banks/metrocity.jpeg" alt="Metrocity" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/HDFC.svg" alt="HDFC Bank" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/kotak.svg" alt="Kotak Mahindra Bank" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/axis.webp" alt="Axis Bank" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/bajaj_finance.svg" alt="Bajaj Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/aditya_birla capital.svg" alt="Aditya Birla Capital" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/lic.webp" alt="LIC HFL" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/lt.png" alt="L&T Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/muthoth.webp" alt="Muthoot Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/bandhan_bank.webp" alt="Bandhan Bank" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/ausmall.webp" alt="AU Small Finance Bank" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/equitas.svg" alt="Equitas" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/jana.webp" alt="Jana Small Finance Bank" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/saraswat.webp" alt="Saraswat Bank" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/piramal.png" alt="Piramal Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/poonawalla.svg" alt="Poonawalla Fincorp" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/chola.png" alt="Chola" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/incred.svg" alt="InCred" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/DMI.svg" alt="DMI Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/credila.svg" alt="HDFC Credila" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/cars24.webp" alt="CARS24" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/nissan.webp" alt="Nissan Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/kmpl.png" alt="KMPL" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/ambit.svg" alt="Ambit" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/mas.webp" alt="MAS Financial" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/ikf.png" alt="IKF Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/Finnable.svg" alt="Finnable" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/oto.webp" alt="OTO Capital" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/iti.webp" alt="ITI" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/jain_finance_opt.webp" alt="Jain Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/ganesh_opt.webp" alt="Ganesh Finance" width="120" height="40" loading="lazy" decoding="async" /></div>
+      <div class="bank-logo-card"><img src="assets/banks/metrocity.jpeg" alt="Metrocity" width="120" height="40" loading="lazy" decoding="async" /></div>
       <a href="industries.html" style="text-decoration: none;">
         <div class="bank-logo-card" style="background:var(--color-charcoal-navy);color:white;font-weight:bold;text-align:center;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;">+ More Clients</div>
       </a>
@@ -878,7 +909,7 @@
   <div class="container footer__inner">
     <div class="footer__brand">
       <a href="index.html" class="footer__logo">
-        <img src="assets/logo.png" alt="Maya Global Services Logo" />
+        <img src="assets/logo.png" alt="Maya Global Services Logo" width="36" height="36" loading="lazy" decoding="async" />
         Maya Global Services
       </a>
       <p class="footer__tagline text-body-sm">
@@ -927,9 +958,44 @@
     <!-- Agency Map Right Side -->
     <div class="footer__map-right">
       <h4 class="footer__nav-title">Our Location</h4>
-      <div style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-        <iframe src="https://maps.google.com/maps?q=26.9030072,75.7481647&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Agency Location Map"></iframe>
+      <!-- Lazy-loaded Google Maps: only injected when footer comes into view -->
+      <div id="map-placeholder" style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15); height: 180px; background: #1e2830; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-direction: column; gap: 8px;" onclick="loadMap(this)" role="button" aria-label="Load location map" tabindex="0">
+        <span class="material-symbols-outlined" style="color: #C7E61E; font-size: 32px;">location_on</span>
+        <span style="color: rgba(255,255,255,0.7); font-size: 13px;">Click to load map</span>
       </div>
+      <script>
+        // Lazy-load Google Maps via Intersection Observer
+        (function() {
+          var placeholder = document.getElementById('map-placeholder');
+          if (!placeholder) return;
+          var mapUrl = 'https://maps.google.com/maps?q=26.9030072,75.7481647&t=&z=15&ie=UTF8&iwloc=&output=embed';
+          function injectMap(container) {
+            var iframe = document.createElement('iframe');
+            iframe.src = mapUrl;
+            iframe.width = '100%';
+            iframe.height = '180';
+            iframe.style.border = '0';
+            iframe.allowFullscreen = true;
+            iframe.referrerPolicy = 'no-referrer-when-downgrade';
+            iframe.title = 'Agency Location Map';
+            container.innerHTML = '';
+            container.style.cursor = 'default';
+            container.appendChild(iframe);
+          }
+          window.loadMap = function(el) { injectMap(el); };
+          if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function(entries) {
+              entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                  injectMap(placeholder);
+                  observer.disconnect();
+                }
+              });
+            }, { rootMargin: '200px' });
+            observer.observe(placeholder);
+          }
+        })();
+      </script>
     </div>
   </div>
 
@@ -947,10 +1013,10 @@
   </div>
 </footer>
 
-<!-- Scripts -->
-<script src="js/api.js"></script>
-<script src="js/utils.js"></script>
-<script src="js/hero-carousel.js"></script>
-<script src="js/home.js"></script>
+<!-- Scripts: defer prevents render-blocking -->
+<script src="js/api.js" defer></script>
+<script src="js/utils.js" defer></script>
+<script src="js/hero-carousel.js" defer></script>
+<script src="js/home.js" defer></script>
 </body>
 </html>

@@ -4,11 +4,9 @@
    Corporate Modernism + Glassmorphism Aesthetic
    ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+/* ─── Fonts loaded via <link> in HTML head — NOT repeated here to avoid duplicate downloads ─── */
+/* See: <link href="https://fonts.googleapis.com/css2?family=Inter..." rel="stylesheet"> in index.html */
 
-/* ─── Custom Font: General Sans (via Fontshare CDN) ─────── */
-@import url('https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap');
 
 /* ─── CSS Custom Properties — Design Tokens ─────────────── */
 :root {
