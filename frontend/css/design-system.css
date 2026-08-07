@@ -208,6 +208,10 @@ input, textarea, select { font-family: inherit; }
 }
 
 @media (min-width: 768px) {
+  .container { padding-inline: 32px; }
+}
+
+@media (min-width: 1024px) {
   .container { padding-inline: var(--margin-desktop); }
 }
 

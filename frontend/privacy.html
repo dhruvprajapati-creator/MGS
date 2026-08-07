@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Maya Global Services</title>
+  <meta name="description" content="Read Maya Global Services' privacy policy. Learn how we collect, store, encrypt, and handle sensitive user verification data according to RBI guidelines." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet" />
+  <link rel="stylesheet" href="css/design-system.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/inner-pages.css" />
+  <style>
+    .policy-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 64px;
+    }
+    .policy-sidebar {
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+    }
+    .policy-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .policy-nav__item {
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      color: var(--color-secondary);
+      font-size: 15px;
+      text-align: left;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      border: none;
+      background: none;
+    }
+    .policy-nav__item:hover {
+      background: rgba(199, 230, 30, 0.08);
+      color: var(--color-charcoal-navy);
+    }
+    .policy-nav__item--active {
+      background: var(--color-charcoal-navy) !important;
+      color: white !important;
+    }
+    .policy-section {
+      margin-bottom: 48px;
+      scroll-margin-top: 100px;
+    }
+    .policy-section h2 {
+      font-size: 24px;
+      margin-bottom: 18px;
+      color: var(--color-charcoal-navy);
+    }
+    .policy-section p, .policy-section li {
+      color: var(--color-secondary);
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .policy-section ul {
+      margin-left: 20px;
+      list-style-type: disc;
+      margin-bottom: 16px;
+    }
+    .policy-section li {
+      margin-bottom: 8px;
+    }
+    @media (max-width: 992px) {
+      .policy-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .policy-sidebar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="main-nav" class="navbar-pill">
+  <div class="navbar-pill__inner">
+    <!-- Logo -->
+    <a href="index.html" class="navbar-pill__logo" data-page="index.html">
+      <span class="navbar-pill__logo-icon">
+        <img src="assets/logo.png" alt="Maya Global Services Logo" />
+      </span>
+      <span class="navbar-pill__logo-text">
+        <span class="main">Maya Global</span>
+        <span class="sub">Services Pvt Ltd</span>
+      </span>
+    </a>
+
+    <!-- Desktop Links -->
+    <div class="navbar-pill__links hide-mobile" id="desktop-nav">
+      <a href="index.html"      data-page="index.html"      class="navbar-pill__link">Home</a>
+      <a href="about.html"      data-page="about.html"      class="navbar-pill__link">About Us</a>
+      <a href="services.html"   data-page="services.html"   class="navbar-pill__link">Services</a>
+      <a href="coverage.html"   data-page="coverage.html"   class="navbar-pill__link">Coverage</a>
+      <a href="industries.html" data-page="industries.html" class="navbar-pill__link">Industries</a>
+    </div>
+
+    <!-- CTA / Call Button -->
+    <div class="navbar-pill__actions hide-mobile">
+      <a href="contact.html" class="btn btn-green btn-sm" style="padding: 8px 20px; font-size: 14px; border-radius: 20px; border-width: 1px;">Contact Us</a>
+    </div>
+    <!-- Mobile Toggle -->
+    <button class="navbar-pill__toggle show-mobile" id="mobile-menu-toggle" aria-label="Toggle Menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="about.html" class="mobile-menu__link">About Us</a>
+    <a href="services.html" class="mobile-menu__link">Services</a>
+    <a href="coverage.html" class="mobile-menu__link">Coverage</a>
+    <a href="industries.html" class="mobile-menu__link">Industries</a>
+    <a href="contact.html" class="btn btn-green btn-sm" style="margin: 8px 16px 16px; text-align: center; border-radius: 20px; font-size: 14px; padding: 10px 0; display: block;">Contact Us</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <span class="text-label-sm section-eyebrow" style="color:var(--color-lime-vibrant)">Security & Compliance</span>
+    <h1 class="text-headline-xl page-hero__title reveal">Privacy Policy</h1>
+    <p class="text-body-lg page-hero__subtitle reveal delay-100">
+      Learn how Maya Global Services collects, stores, protects, and manages sensitive user verification data under strict security standards.
+    </p>
+  </div>
+</section>
+
+<!-- POLICY SECTION -->
+<section class="section-padding" style="background:white">
+  <div class="container">
+    <div class="policy-grid">
+      <!-- Sidebar Navigation -->
+      <aside class="policy-sidebar reveal">
+        <div class="policy-nav">
+          <button class="policy-nav__item policy-nav__item--active" onclick="scrollToSection('intro')">1. Introduction</button>
+          <button class="policy-nav__item" onclick="scrollToSection('collection')">2. Data Collection</button>
+          <button class="policy-nav__item" onclick="scrollToSection('usage')">3. Data Retention & Usage</button>
+          <button class="policy-nav__item" onclick="scrollToSection('security')">4. Security Standards</button>
+          <button class="policy-nav__item" onclick="scrollToSection('compliance')">5. RBI Compliance</button>
+          <button class="policy-nav__item" onclick="scrollToSection('contact-info')">6. Contact & Grievances</button>
+        </div>
+      </aside>
+
+      <!-- Content -->
+      <div class="policy-content reveal">
+        <div id="intro" class="policy-section">
+          <h2>1. Introduction</h2>
+          <p>At Maya Global Services Pvt. Ltd. (MGS), we prioritize data protection and privacy. This Privacy Policy details how we handle personal, financial, and corporate data collected during our field verification, KYC validation, risk assessment, and reporting activities.</p>
+          <p>MGS serves as an outsourced data processor for our client financial institutions (banks, NBFCs, and fintech companies). All data processing is done under strictly defined service agreements and regulatory guidelines.</p>
+        </div>
+
+        <div id="collection" class="policy-section">
+          <h2>2. Data Collection</h2>
+          <p>To fulfill verification requests, we collect the following categories of information under explicit client authorization:</p>
+          <ul>
+            <li><strong>Identity Details:</strong> Full Name, Date of Birth, Aadhaar Number, PAN Card, Voter ID, Passport, or other official government-issued identifiers.</li>
+            <li><strong>Contact & Address:</strong> Residential address, commercial address, phone numbers, and email addresses.</li>
+            <li><strong>Financial Profile:</strong> Bank statement copies, salary statements, GST filings, and employment or business documentation.</li>
+            <li><strong>Photographic Evidence:</strong> Site photographs, property images, and business storefront images captured by our verified field executives.</li>
+          </ul>
+        </div>
+
+        <div id="usage" class="policy-section">
+          <h2>3. Data Retention & Usage</h2>
+          <p><strong>Maya Global Services does not permanently store any client's data.</strong> All collected information, verification logs, and associated records are temporarily stored on our secure servers and are automatically and permanently deleted after a period of <strong>3 months</strong>.</p>
+          <p>The information we collect is strictly used to compile verification and risk management reports for the requesting financial institution. We do NOT:</p>
+          <ul>
+            <li>Share, lease, sell, or disclose personal verification data to third-party marketing companies.</li>
+            <li>Use the data for personal profit, target profiling, or secondary commercial purposes.</li>
+          </ul>
+        </div>
+
+        <div id="security" class="policy-section">
+          <h2>4. Security Standards</h2>
+          <p>MGS employs bank-grade security protocols to prevent data loss, unauthorized access, alteration, or disclosure during the 3-month retention window:</p>
+          <ul>
+            <li><strong>AES-256 Encryption:</strong> Data stored on our servers is protected using advanced encryption standards.</li>
+            <li><strong>Secure Mobile App:</strong> Our field executives capture and upload photographic and textual evidence through a secure, encrypted mobile app with no local storage capability on the device itself.</li>
+            <li><strong>Centralized Access Control:</strong> Strict role-based login permissions limit access to authorized quality controllers and auditors.</li>
+          </ul>
+        </div>
+
+        <div id="compliance" class="policy-section">
+          <h2>5. RBI Compliance</h2>
+          <p>We comply fully with the Reserve Bank of India (RBI) outsourcing guidelines for financial institutions. We implement comprehensive audit trails, maintain data localization requirements inside India, and coordinate regular third-party security audits to ensure compliance and integrity.</p>
+        </div>
+
+        <div id="contact-info" class="policy-section">
+          <h2>6. Contact & Grievances</h2>
+          <p>If you have questions about this policy, or want to report a concern regarding data security, please contact our Grievance Officer:</p>
+          <p>
+            <strong>Maya Global Services Pvt. Ltd.</strong><br>
+            279-A, Road No. 10, Moti Nagar Queens Road,<br>
+            Vaishali Nagar Jaipur - 302019<br>
+            <strong>Email:</strong> <a href="mailto:info@mayaglobalservices.in" style="color:var(--color-primary);font-weight:600">info@mayaglobalservices.in</a><br>
+            <strong>Office:</strong> <a href="tel:+911413105800" style="color:var(--color-primary);font-weight:600">0141-3105800</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="footer__logo">
+        <img src="assets/logo.png" alt="Maya Global Services Logo" />
+        Maya Global Services
+      </a>
+      <p class="footer__tagline text-body-sm">
+        Reliable field verification and investigation services trusted by banks, NBFCs, fintech companies, and businesses across North India since 2005.
+      </p>
+    </div>
+
+    <div class="footer__nav">
+      <div class="footer__nav-group">
+        <h4 class="footer__nav-title">Services</h4>
+        <a href="services.html#field" class="footer__nav-link">Field Investigation</a>
+        <a href="services.html#customer" class="footer__nav-link">Customer Verification</a>
+        <a href="services.html#risk" class="footer__nav-link">Risk Management Support</a>
+        <a href="services.html#onboarding" class="footer__nav-link">Account Origination & Onboarding</a>
+        <a href="services.html#mis" class="footer__nav-link">Digital MIS & Reporting</a>
+        <a href="services.html" class="footer__nav-link" style="color: var(--color-lime-vibrant, #C7E61E); font-weight: 600; margin-top: 8px;">View All Services →</a>
+      </div>
+      <div class="footer__nav-group">
+        <h4 class="footer__nav-title">Company</h4>
+        <a href="about.html" class="footer__nav-link">About Us</a>
+        <a href="about.html" class="footer__nav-link">Vision & Mission</a>
+        <a href="industries.html" class="footer__nav-link">Industries</a>
+        <a href="faq.html" class="footer__nav-link">FAQ</a>
+      </div>
+      <div class="footer__nav-group">
+        <h4 class="footer__nav-title">Contact</h4>
+        <a href="contact.html#contact-form" class="footer__nav-link">Request a Quote</a>
+        <a href="contact.html" class="footer__nav-link">Contact Us</a>
+        <a href="contact.html" class="footer__nav-link">Support</a>
+        <a href="privacy.html" class="footer__nav-link">Privacy Policy</a>
+        <a href="terms.html" class="footer__nav-link">Terms of Service</a>
+      </div>
+    </div>
+
+    <!-- Agency Map Right Side -->
+    <div class="footer__map-right">
+      <h4 class="footer__nav-title">Our Location</h4>
+      <div style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin-bottom: 16px;">
+        <iframe src="https://maps.google.com/maps?q=26.9030072,75.7481647&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Agency Location Map"></iframe>
+      </div>
+      <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6; font-size: 14px;">
+        <strong>Office:</strong> <a href="tel:+911413105800" class="footer__nav-link" style="display: inline;">0141-3105800</a><br>
+        <strong>Mail:</strong> <a href="mailto:info@mayaglobalservices.in" class="footer__nav-link" style="display: inline;">info@mayaglobalservices.in</a>
+      </p>
+      <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6; font-size: 14px; margin-top: 8px;">
+        279-A, Road No. 10<br>
+        Moti Nagar Queens Road<br>
+        Vaishali Nagar Jaipur - 302019
+      </p>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <p class="text-body-sm footer__copy">
+        © 2026 Maya Global Services Pvt. Ltd. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/utils.js"></script>
+<script>
+  function scrollToSection(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    
+    const yOffset = -90; // offset for nav pill height
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+
+    document.querySelectorAll('.policy-nav__item').forEach(btn => {
+      btn.classList.remove('policy-nav__item--active');
+    });
+    
+    const activeBtn = Array.from(document.querySelectorAll('.policy-nav__item')).find(btn => 
+      btn.getAttribute('onclick').includes(id)
+    );
+    if (activeBtn) activeBtn.classList.add('policy-nav__item--active');
+  }
+
+  // Update navigation highlight on scroll
+  window.addEventListener('scroll', () => {
+    const sections = ['intro', 'collection', 'usage', 'security', 'compliance', 'contact-info'];
+    let currentActive = '';
+    
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= 150) {
+          currentActive = id;
+        }
+      }
+    });
+
+    if (currentActive) {
+      document.querySelectorAll('.policy-nav__item').forEach(btn => {
+        btn.classList.remove('policy-nav__item--active');
+        if (btn.getAttribute('onclick').includes(currentActive)) {
+          btn.classList.add('policy-nav__item--active');
+        }
+      });
+    }
+  }, { passive: true });
+</script>
+</body>
+</html>

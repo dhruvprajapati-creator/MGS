@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequently Asked Questions | Maya Global Services</title>
+  <meta name="description" content="Find answers to common questions about Maya Global Services' verification network, turnaround times, data security, and technology-driven operations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet" />
+  <link rel="stylesheet" href="css/design-system.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/inner-pages.css" />
+  <style>
+    .faq-category {
+      margin-bottom: 56px;
+    }
+    .faq-category__title {
+      font-size: 22px;
+      color: var(--color-charcoal-navy);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2px solid #E1E8EB;
+      padding-bottom: 12px;
+    }
+    .faq-category__icon {
+      color: var(--color-lime-vibrant);
+      font-size: 28px;
+    }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 64px;
+    }
+    .faq-sidebar {
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+    }
+    .faq-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .faq-nav__item {
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      color: var(--color-secondary);
+      font-size: 15px;
+      text-align: left;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      border: none;
+      background: none;
+    }
+    .faq-nav__item:hover {
+      background: rgba(199, 230, 30, 0.08);
+      color: var(--color-charcoal-navy);
+    }
+    .faq-nav__item--active {
+      background: var(--color-charcoal-navy) !important;
+      color: white !important;
+    }
+    @media (max-width: 992px) {
+      .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .faq-sidebar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="main-nav" class="navbar-pill">
+  <div class="navbar-pill__inner">
+    <!-- Logo -->
+    <a href="index.html" class="navbar-pill__logo" data-page="index.html">
+      <span class="navbar-pill__logo-icon">
+        <img src="assets/logo.png" alt="Maya Global Services Logo" />
+      </span>
+      <span class="navbar-pill__logo-text">
+        <span class="main">Maya Global</span>
+        <span class="sub">Services Pvt Ltd</span>
+      </span>
+    </a>
+
+    <!-- Desktop Links -->
+    <div class="navbar-pill__links hide-mobile" id="desktop-nav">
+      <a href="index.html"      data-page="index.html"      class="navbar-pill__link">Home</a>
+      <a href="about.html"      data-page="about.html"      class="navbar-pill__link">About Us</a>
+      <a href="services.html"   data-page="services.html"   class="navbar-pill__link">Services</a>
+      <a href="coverage.html"   data-page="coverage.html"   class="navbar-pill__link">Coverage</a>
+      <a href="industries.html" data-page="industries.html" class="navbar-pill__link">Industries</a>
+    </div>
+
+    <!-- CTA / Call Button -->
+    <div class="navbar-pill__actions hide-mobile">
+      <a href="contact.html" class="btn btn-green btn-sm" style="padding: 8px 20px; font-size: 14px; border-radius: 20px; border-width: 1px;">Contact Us</a>
+    </div>
+    <!-- Mobile Toggle -->
+    <button class="navbar-pill__toggle show-mobile" id="mobile-menu-toggle" aria-label="Toggle Menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="about.html" class="mobile-menu__link">About Us</a>
+    <a href="services.html" class="mobile-menu__link">Services</a>
+    <a href="coverage.html" class="mobile-menu__link">Coverage</a>
+    <a href="industries.html" class="mobile-menu__link">Industries</a>
+    <a href="contact.html" class="btn btn-green btn-sm" style="margin: 8px 16px 16px; text-align: center; border-radius: 20px; font-size: 14px; padding: 10px 0; display: block;">Contact Us</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <span class="text-label-sm section-eyebrow" style="color:var(--color-lime-vibrant)">Help & Support</span>
+    <h1 class="text-headline-xl page-hero__title reveal">Frequently Asked Questions</h1>
+    <p class="text-body-lg page-hero__subtitle reveal delay-100">
+      Have questions about our verification network, TAT, technology, or security standards? Find detailed answers below.
+    </p>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="section-padding" style="background:var(--color-surface-ice)">
+  <div class="container">
+    <div class="faq-grid">
+      <!-- Sidebar Navigation -->
+      <aside class="faq-sidebar reveal">
+        <div class="faq-nav">
+          <button class="faq-nav__item faq-nav__item--active" onclick="scrollToCategory('services-scope')">Services & Network</button>
+          <button class="faq-nav__item" onclick="scrollToCategory('tech-tat')">Technology & TAT</button>
+          <button class="faq-nav__item" onclick="scrollToCategory('security-compliance')">Security & Compliance</button>
+          <button class="faq-nav__item" onclick="scrollToCategory('partnerships-slas')">Partnerships & SLAs</button>
+          <button class="faq-nav__item" onclick="scrollToCategory('commercials-billing')">Commercials & Billing</button>
+        </div>
+      </aside>
+
+      <!-- FAQ Content -->
+      <div class="faq-content">
+        <!-- Services & Scope -->
+        <div id="services-scope" class="faq-category reveal">
+          <h3 class="faq-category__title">
+            <span class="material-symbols-outlined faq-category__icon">hub</span>
+            Services & Network Scope
+          </h3>
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">What types of verification services do you provide?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">We offer a comprehensive suite of services including Field Investigation (FI), Customer Verification / KYC, Risk Management Support, Account Origination & Onboarding support, Digital MIS & Reporting, and Post Disbursement Verification (PDV). You can read more details on our <a href="services.html" style="color:var(--color-primary);font-weight:600">services page</a>.</p>
+              </div>
+            </div>
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">Which regions do you cover?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">We currently cover Rajasthan, Haryana, Punjab, Gurgaon, and Delhi NCR. Please check our detailed <a href="coverage.html" style="color:var(--color-primary);font-weight:600">coverage map</a> for specific districts and operational details.</p>
+              </div>
+            </div>
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">Can you handle high-volume bulk verification requests?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">Yes, absolutely. We support major public/private banks and NBFCs with bulk onboarding pipelines. Our network of over 445+ field executives, supported by centralized quality control, allows us to scale processing capacity to thousands of cases per month while keeping TAT minimal.</p>
+              </div>
+            </div>
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">Which industries do you serve?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">While banking institutions, NBFCs, and microfinance firms are our primary partners, we also provide verification services for fintech platforms, telecommunication corporations, insurance agencies, and corporate employers requiring robust background and location validation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technology & TAT -->
+        <div id="tech-tat" class="faq-category reveal">
+          <h3 class="faq-category__title">
+            <span class="material-symbols-outlined faq-category__icon">speed</span>
+            Technology & Turnaround Time (TAT)
+          </h3>
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">What is your typical turnaround time (TAT)?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">Our standard turnaround time is 4 hours for digital/field verifications in major districts, and up to 24 hours for distant rural cases. Turnaround times are monitored in real time, and you can view direct updates on our MIS dashboard.</p>
+              </div>
+            </div>
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">How do you verify the accuracy of the field report?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">Our field executives capture site photographs, physical documents, and verified timestamps. All collected reports are reviewed by our centralized Quality Control team in a dual-layered audit process prior to client submission.</p>
+              </div>
+            </div>
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">How do clients access verification reports?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">All verified data, photographs, and generated status reports are made available on our secure MIS dashboard. Clients can log in to view case tracking status and download report archives directly.</p>
+              </div>
+            </div>
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">How large is your operational field network?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">Our network includes over 445+ thoroughly background-checked and professionally trained field executives. This large operational workforce guarantees deep penetration and quick response times even in rural or remote areas across our covered states.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Security & Compliance -->
+        <div id="security-compliance" class="faq-category reveal">
+          <h3 class="faq-category__title">
+            <span class="material-symbols-outlined faq-category__icon">security</span>
+            Security & Compliance Standards
+          </h3>
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">How do you ensure data security and customer confidentiality?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">We employ secure transmission protocols for all communication between our field executives' mobile app and our servers. Access to verified files is strictly controlled through role-based access management, with complete audit logs tracking all view requests.</p>
+              </div>
+            </div>
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">What is your data retention policy?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">We prioritize data privacy and confidentiality. The company does not permanently store any client's data. All data and associated verification reports are automatically and permanently deleted from our servers after 3 months.</p>
+              </div>
+            </div>
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">How long has Maya Global Services been operating?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">We have been a trusted verification partner since 2005. Over our 20+ years of operating experience, we have successfully completed millions of verifications and built strong partnerships with key financial institutions in North India.</p>
+              </div>
+            </div>
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">How do clients report verification questions or request support?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">We maintain a dedicated support desk at our head office. Clients can reach out to our team at any time via email at <a href="mailto:info@mayaglobalservices.in" style="color:var(--color-primary);font-weight:600">info@mayaglobalservices.in</a> or by calling us directly at <a href="tel:+911413105800" style="color:var(--color-primary);font-weight:600">0141-3105800</a> for rapid assistance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partnerships & SLAs -->
+        <div id="partnerships-slas" class="faq-category reveal">
+          <h3 class="faq-category__title">
+            <span class="material-symbols-outlined faq-category__icon">handshake</span>
+            Partnerships & SLAs
+          </h3>
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">How can a new financial institution start a partnership with Maya Global Services?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">New clients can initiate a partnership by reaching out via our contact form or calling our corporate office. We will set up an initial consultation to discuss your specific verification needs, volume requirements, and coverage details, followed by executing a standard Master Services Agreement (MSA).</p>
+              </div>
+            </div>
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">Do you sign Service Level Agreements (SLAs) with clients?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">Yes, absolutely. We execute custom SLAs with every client partner that specify standard turnaround times, reporting quality metrics, confidentiality guidelines, and data deletion timelines.</p>
+              </div>
+            </div>
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">What happens if a verification report does not meet SLA quality standards?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">We operate a dual-layered quality control audit. If a report is flagged for correction or fails to meet our strict quality metrics, it is automatically routed back to our Quality Control team for immediate rectification. Re-verifications are completed at no additional cost to the client.</p>
+              </div>
+            </div>
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">Can we customize the verification checklist for our specific products?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">Yes. We understand that home loans, vehicle loans, and merchant onboarding require different check parameters. We work closely with our client partners to customize the verification questionnaire and executive checklist to match your risk guidelines.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commercials & Billing -->
+        <div id="commercials-billing" class="faq-category reveal">
+          <h3 class="faq-category__title">
+            <span class="material-symbols-outlined faq-category__icon">payments</span>
+            Commercials & Billing
+          </h3>
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">How is the pricing for verification services structured?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">Our pricing is structured based on the service type (e.g. residential vs business verification), geographical zone (urban vs remote rural), and projected monthly volume. We offer highly competitive rates for bulk verification pipelines.</p>
+              </div>
+            </div>
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">What is the standard billing and payment cycle?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">Billing is processed on a monthly cycle. MGS generates a consolidated itemized invoice detailing all completed verifications at the end of each month, with standard payment terms of 15 to 30 days as defined in the client contract.</p>
+              </div>
+            </div>
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">Are there any setup fees or subscription costs for using the MIS dashboard?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">No, there are no setup fees. Access to our secure MIS dashboard is provided completely free of charge to all active client partners. You only pay for the specific verification cases successfully completed.</p>
+              </div>
+            </div>
+            <div class="accordion-item card" style="padding:0;overflow:hidden">
+              <div class="accordion-header" style="padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                <h4 style="font-size:16px;color:var(--color-charcoal-navy)">Do you offer volume-based discounts for high-volume verification pipelines?</h4>
+                <span class="material-symbols-outlined accordion-icon" style="transition:transform 0.3s;color:var(--color-secondary)">expand_more</span>
+              </div>
+              <div class="accordion-body" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
+                <p style="padding:0 24px 20px;color:var(--color-secondary);font-size:15px">Yes. We offer customized volume-based pricing tiers for institutions with high monthly verification volumes. These rates are negotiated and locked in during the execution of the Master Services Agreement.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section" style="padding-top:0">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="cta-card__orb cta-card__orb--1"></div>
+      <div class="cta-card__orb cta-card__orb--2"></div>
+      <div class="cta-card__content">
+        <h2 class="text-headline-lg cta-card__title">Still Have Questions?</h2>
+        <p class="text-body-lg cta-card__subtitle">Our support team is ready to provide any additional details you need regarding our processes, pricing, or custom options.</p>
+        <div class="cta-card__actions">
+          <a href="contact.html" class="btn btn-primary">Contact Our Team</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="footer__logo">
+        <img src="assets/logo.png" alt="Maya Global Services Logo" />
+        Maya Global Services
+      </a>
+      <p class="footer__tagline text-body-sm">
+        Reliable field verification and investigation services trusted by banks, NBFCs, fintech companies, and businesses across North India since 2005.
+      </p>
+    </div>
+
+    <div class="footer__nav">
+      <div class="footer__nav-group">
+        <h4 class="footer__nav-title">Services</h4>
+        <a href="services.html#field" class="footer__nav-link">Field Investigation</a>
+        <a href="services.html#customer" class="footer__nav-link">Customer Verification</a>
+        <a href="services.html#risk" class="footer__nav-link">Risk Management Support</a>
+        <a href="services.html#onboarding" class="footer__nav-link">Account Origination & Onboarding</a>
+        <a href="services.html#mis" class="footer__nav-link">Digital MIS & Reporting</a>
+        <a href="services.html" class="footer__nav-link" style="color: var(--color-lime-vibrant, #C7E61E); font-weight: 600; margin-top: 8px;">View All Services →</a>
+      </div>
+      <div class="footer__nav-group">
+        <h4 class="footer__nav-title">Company</h4>
+        <a href="about.html" class="footer__nav-link">About Us</a>
+        <a href="about.html" class="footer__nav-link">Vision & Mission</a>
+        <a href="industries.html" class="footer__nav-link">Industries</a>
+        <a href="faq.html" class="footer__nav-link">FAQ</a>
+      </div>
+      <div class="footer__nav-group">
+        <h4 class="footer__nav-title">Contact</h4>
+        <a href="contact.html#contact-form" class="footer__nav-link">Request a Quote</a>
+        <a href="contact.html" class="footer__nav-link">Contact Us</a>
+        <a href="contact.html" class="footer__nav-link">Support</a>
+        <a href="privacy.html" class="footer__nav-link">Privacy Policy</a>
+        <a href="terms.html" class="footer__nav-link">Terms of Service</a>
+      </div>
+    </div>
+
+    <!-- Agency Map Right Side -->
+    <div class="footer__map-right">
+      <h4 class="footer__nav-title">Our Location</h4>
+      <div style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin-bottom: 16px;">
+        <iframe src="https://maps.google.com/maps?q=26.9030072,75.7481647&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Agency Location Map"></iframe>
+      </div>
+      <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6; font-size: 14px;">
+        <strong>Office:</strong> <a href="tel:+911413105800" class="footer__nav-link" style="display: inline;">0141-3105800</a><br>
+        <strong>Mail:</strong> <a href="mailto:info@mayaglobalservices.in" class="footer__nav-link" style="display: inline;">info@mayaglobalservices.in</a>
+      </p>
+      <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6; font-size: 14px; margin-top: 8px;">
+        279-A, Road No. 10<br>
+        Moti Nagar Queens Road<br>
+        Vaishali Nagar Jaipur - 302019
+      </p>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <p class="text-body-sm footer__copy">
+        © 2026 Maya Global Services Pvt. Ltd. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/utils.js"></script>
+<script>
+  domReady(() => {
+    Accordion.init('.accordion-item');
+  });
+
+  function scrollToCategory(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    
+    // Smooth scroll to the category element
+    const yOffset = -90; // offset for nav pill height
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+
+    // Update active nav item state
+    document.querySelectorAll('.faq-nav__item').forEach(btn => {
+      btn.classList.remove('faq-nav__item--active');
+    });
+    
+    // Find matching navigation button
+    const activeBtn = Array.from(document.querySelectorAll('.faq-nav__item')).find(btn => 
+      btn.getAttribute('onclick').includes(id)
+    );
+    if (activeBtn) activeBtn.classList.add('faq-nav__item--active');
+  }
+
+  // Update navigation highlight on scroll
+  window.addEventListener('scroll', () => {
+    const categories = ['services-scope', 'tech-tat', 'security-compliance', 'partnerships-slas', 'commercials-billing'];
+    let currentActive = '';
+    
+    categories.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= 150) {
+          currentActive = id;
+        }
+      }
+    });
+
+    if (currentActive) {
+      document.querySelectorAll('.faq-nav__item').forEach(btn => {
+        btn.classList.remove('faq-nav__item--active');
+        if (btn.getAttribute('onclick').includes(currentActive)) {
+          btn.classList.add('faq-nav__item--active');
+        }
+      });
+    }
+  }, { passive: true });
+</script>
+</body>
+</html>

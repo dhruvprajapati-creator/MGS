@@ -958,7 +958,7 @@
 
 @media (max-width: 1024px) {
   .industries-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1360,4 +1360,24 @@
   background: #FFFFFF !important;
   width: 24px !important;
   border-radius: 6px !important;
+}
+
+/* Tablet Navbar Fix: Hide desktop links and show mobile menu below 1024px */
+@media (max-width: 1024px) {
+  .navbar-pill__links {
+    display: none !important;
+  }
+  .navbar-pill__actions {
+    display: none !important;
+  }
+  .navbar-pill__toggle.show-mobile {
+    display: flex !important;
+  }
+}
+
+/* Tablet trustGrid alignment: force 2 columns on all tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #trustGrid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
