@@ -5,12 +5,12 @@
 
 // Detect if served locally or in production
 const _isLocal = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
-// NOTE: Update BACKEND_URL below when production backend is deployed.
-// Leave as null to disable API calls in production (static content is shown as fallback).
-const BACKEND_URL = null; // e.g. 'https://maya-backend.onrender.com'
+// NOTE: Update BACKEND_URL below if the backend is hosted on a different domain than the frontend.
+// If backend and frontend are hosted on the same domain (e.g., Vercel), it will automatically fall back to '/api'.
+const BACKEND_URL = null; // e.g., 'https://api.mayaglobalservices.in'
 const API_BASE = _isLocal
   ? (window.location.port === '5000' ? '/api' : 'http://localhost:5000/api')
-  : (BACKEND_URL ? BACKEND_URL + '/api' : null);
+  : (BACKEND_URL ? BACKEND_URL + '/api' : '/api');
 
 const API = {
   /**

@@ -1,0 +1,19 @@
+{
+  "name": "maya-global-services",
+  "version": "1.0.0",
+  "description": "Maya Global Services monorepo",
+  "scripts": {
+    "backend:dev": "npm run dev --prefix backend",
+    "backend:start": "npm run start --prefix backend",
+    "frontend:dev": "npm run dev --prefix frontend",
+    "frontend:start": "npm run start --prefix frontend"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "nodemailer": "^6.9.7"
+  }
+}
