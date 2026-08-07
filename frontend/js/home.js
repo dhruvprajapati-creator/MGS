@@ -87,8 +87,8 @@ domReady(async () => {
     dotsContainer.id = 'servicesDots';
     grid.parentNode.appendChild(dotsContainer);
 
-    // Create exactly 5 dots
-    for (let i = 0; i < 5; i++) {
+    // Create exactly N dots
+    for (let i = 0; i < N; i++) {
       const dot = document.createElement('button');
       dot.className = `services-dot ${i === 0 ? 'active' : ''}`;
       dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
@@ -124,12 +124,12 @@ domReady(async () => {
       const relativeScroll = grid.scrollLeft - (3 * cardWidthWithGap);
       const activeIndex = Math.round(relativeScroll / cardWidthWithGap);
       
-      // Update global active tracker (clamp/wrap within 0 to 13 range)
-      currentActiveIndex = (activeIndex % 14 + 14) % 14;
+      // Update global active tracker (clamp/wrap within 0 to totalLoopLength-1 range)
+      currentActiveIndex = (activeIndex % totalLoopLength + totalLoopLength) % totalLoopLength;
 
-      // Map 14 slides to 7 original cards, then to 5 dots (modulo 5)
+      // Map slides to N original cards
       const originalCardIndex = currentActiveIndex % N;
-      const dotIndex = originalCardIndex % 5;
+      const dotIndex = originalCardIndex;
 
       const dots = dotsContainer.querySelectorAll('.services-dot');
       dots.forEach((dot, dIdx) => {
@@ -291,8 +291,8 @@ domReady(async () => {
     dotsContainer.style.marginTop = '24px';
     trustGrid.parentNode.appendChild(dotsContainer);
 
-    // Create exactly 5 dots
-    for (let i = 0; i < 5; i++) {
+    // Create exactly N_trust dots
+    for (let i = 0; i < N_trust; i++) {
       const dot = document.createElement('button');
       dot.className = `services-dot ${i === 0 ? 'active' : ''}`;
       dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
@@ -329,10 +329,10 @@ domReady(async () => {
       const relativeScroll = trustGrid.scrollLeft - (3 * cardWidthWithGap);
       const activeIndex = Math.round(relativeScroll / cardWidthWithGap);
       
-      currentTrustActiveIndex = (activeIndex % 12 + 12) % 12;
+      currentTrustActiveIndex = (activeIndex % totalTrustLoopLength + totalTrustLoopLength) % totalTrustLoopLength;
 
       const originalCardIndex = currentTrustActiveIndex % N_trust;
-      const dotIndex = originalCardIndex % 5;
+      const dotIndex = originalCardIndex;
 
       const dots = dotsContainer.querySelectorAll('.services-dot');
       dots.forEach((dot, dIdx) => {
