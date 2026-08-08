@@ -30,7 +30,11 @@ const API = {
       });
       const data = await response.json();
       if (!response.ok) {
-        throw new Error(data.message || `HTTP ${response.status}`);
+        let errorMessage = data.message;
+        if (!errorMessage && data.errors && data.errors.length > 0) {
+          errorMessage = data.errors.join(' ');
+        }
+        throw new Error(errorMessage || `HTTP ${response.status}`);
       }
       return data;
     } catch (error) {
